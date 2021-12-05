@@ -1,0 +1,150 @@
+import React from "react";
+import Menu from "./components/Menu";
+import Presentation from "./components/Presentation";
+import Gallery from "./components/Gallery";
+import AboutMe from "./components/AboutMe";
+import ClassesBerlin from "./components/ClassesBerlin";
+import Choreography from "./components/Choreography";
+import Contact from "./components/Contact";
+import AppConditionalRendering from "./components/AppConditionalRendering";
+import styled, { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+
+@font-face {
+  font-family: "Roboto Light";
+  src: url("Roboto-LightItalic.ttf");
+}
+
+@font-face {
+  font-family: "Six Caps";
+  src: url("SixCaps-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Black";
+  src: url("Roboto-Black.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Medium";
+  src: url("Roboto-Medium.ttf");
+}
+
+html {
+  --main-bg-color: #83af9b;
+  --main-lightblue-color: rgb(109, 108, 108);
+  --main-deutsch-color: black;
+  --main-black-color: black;
+  --main-white-color: white;
+  --main-title-color: #fff;
+  --main-buttonText-color: #8cccfa;
+  --main-title-footer: #83af9b;
+  --footer-title: #fff;
+  --footer-content: #8cccfa;
+}
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: var(--main-bg-color);
+    max-width: 1440px;
+    margin: 16px auto;
+  }
+
+  h1 {
+  font-size: 10em;
+  color: var(--main-black-color);
+}
+
+h2 {
+  font-size: 4em;
+  color: var(--main-white-color);
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Black";
+}
+
+h3 {
+  font-size: 3em;
+  color: var(--main-white-color);
+  margin: 0;
+  font-family: "Roboto Light";
+}
+
+h4 {
+  font-size: 2em;
+  color: var(--main-white-color);
+  margin: 0;
+  font-family: "Roboto Light";
+}
+
+p {
+  line-height: 1.6rem;
+  cursor: default;
+}
+
+a {
+  color: var(--main-white-color);
+  text-decoration: none;
+  &:hover {
+    color: var(--main-white-color);
+  }
+}
+
+.deutsch {
+  color: var(--main-deutsch-color) !important;
+}
+
+.deutsch-black {
+  font-size: 1.3rem;
+  color: var(--main-deutsch-color) !important;
+}
+
+/* Menu principal */
+
+.separador {
+  height: 20vh;
+  width: 100vw;
+}
+
+a:active {
+  color: var(--main-black-color);
+  background-color: var(--main-white-color);
+}
+
+`;
+
+function App() {
+  return (
+    <>
+      <GlobalStyle />
+      <StyledApp>
+        <Menu />
+        <Presentation />
+        <Gallery />
+        <AppConditionalRendering />
+        <ClassesBerlin />
+        <Choreography />
+        <AboutMe />
+        <Contact />
+      </StyledApp>
+    </>
+  );
+}
+
+export default App;
+
+const StyledApp = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
