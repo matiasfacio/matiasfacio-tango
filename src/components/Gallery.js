@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
 
-const boxes = ["1", "5", "6", "8", "10", "12"];
+const imagesLinks = [
+  "https://res.cloudinary.com/matiasfacio/image/upload/v1638830489/MatiasFacio.com/1-low_j2dbaa.jpg",
+  "https://res.cloudinary.com/matiasfacio/image/upload/v1638830490/MatiasFacio.com/5-low_ynqvx7.jpg",
+  "https://res.cloudinary.com/matiasfacio/image/upload/v1638830490/MatiasFacio.com/6-low_jdoceu.jpg",
+  "https://res.cloudinary.com/matiasfacio/image/upload/v1638830490/MatiasFacio.com/8-low_oiikhb.jpg",
+  "https://res.cloudinary.com/matiasfacio/image/upload/v1638830490/MatiasFacio.com/10-low_eec7zi.jpg",
+  "https://res.cloudinary.com/matiasfacio/image/upload/v1638830490/MatiasFacio.com/12b_sepuln.jpg",
+];
 
 export default function Gallery() {
-  const [mainBackground, setMainBackground] = useState(8);
+  const [mainBackground, setMainBackground] = useState(imagesLinks[0]);
 
   const changeImage = (box) => {
     setMainBackground(box);
@@ -14,12 +21,12 @@ export default function Gallery() {
     <StyledSection id="two" backgroundImage={mainBackground}>
       <div className="titulo"></div>
       <Boxes>
-        {boxes.map((box) => {
+        {imagesLinks.map((image, index) => {
           return (
             <StylesBox
-              key={box}
-              backgroundImage={box}
-              onClick={() => changeImage(box)}
+              key={index}
+              backgroundImage={image}
+              onClick={() => changeImage(image)}
             ></StylesBox>
           );
         })}
@@ -61,7 +68,7 @@ const StyledSection = styled.div`
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url(./images/${backgroundImage}-low.jpg);
+        background-image: url(${backgroundImage});
         background-position: top center;
         background-size: contain;
         background-blend-mode: luminosity;
@@ -84,11 +91,12 @@ const StylesBox = styled.div`
   margin-right: 20px;
   ${({ backgroundImage }) =>
     css`
-      background-image: url(./images/${backgroundImage}-low.jpg);
+      background-image: url(${backgroundImage});
       background-size: cover;
       background-color: #83af9b;
       background-blend-mode: luminosity;
       background-repeat: no-repeat;
+      background-position: right;
     `}
   border-radius: 20px;
   border: 3px var(--main-deutsch-color) solid;

@@ -58,26 +58,23 @@ export default function AppConditionalRendering() {
     color: "white",
     fontWeight: "bolder",
     fontFamily: "Roboto Black",
-    fontSize: "3em",
+    fontSize: "2em",
     marginBottom: "50px",
   };
 
   const styleMessage = {
     color: "#8cccfa",
     backgroundColor: "black",
-    fontWeight: "bolder",
     fontFamily: "Roboto Black",
     borderRadius: "20px",
     fontSize: "2em",
-    padding: "50px",
-    borderRight: "3px white solid",
-    borderBottom: "3px white solid",
+    padding: "20px",
   };
 
   return (
     <StyledSection>
       <p style={styleP}>
-        {isLoading ? "loading..." : "The temperature in Berlin feels like: "}
+        {isLoading ? "loading..." : "Temperature in Berlin feels like: "}
       </p>
       <div style={styleTemp}>
         <p style={weather < 18 ? styleCelCold : styleCelHot}>{weather}º</p>

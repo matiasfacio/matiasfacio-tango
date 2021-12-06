@@ -1,14 +1,12 @@
 function DisplayMessage(props) {
+  let mensaje;
 
-    let mensaje;
-    
+  mensaje =
+    props.objetoWeather > 20
+      ? "... it is hot,  let us dance Tango!"
+      : "... quite cold. Let us embrace!";
 
-    mensaje = (props.objetoWeather > 20) ? '... it is hot,  let us dance Tango!':'... quite cold. Let us embrace!'
-
-    
-
-    return mensaje
-     
+  return mensaje;
 }
 
-export default DisplayMessage
+export default DisplayMessage;

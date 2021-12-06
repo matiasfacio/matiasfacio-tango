@@ -3,11 +3,12 @@ import Menu from "./components/Menu";
 import Presentation from "./components/Presentation";
 import Gallery from "./components/Gallery";
 import AboutMe from "./components/AboutMe";
-import ClassesBerlin from "./components/ClassesBerlin";
+import PrivateLessons from "./components/PrivateLessons";
 import Choreography from "./components/Choreography";
 import Contact from "./components/Contact";
 import AppConditionalRendering from "./components/AppConditionalRendering";
 import styled, { createGlobalStyle } from "styled-components";
+import GroupLessons from "./components/GroupLessons";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -130,7 +131,8 @@ function App() {
         <Presentation />
         <Gallery />
         <AppConditionalRendering />
-        <ClassesBerlin />
+        <GroupLessons />
+        <PrivateLessons />
         <Choreography />
         <AboutMe />
         <Contact />
