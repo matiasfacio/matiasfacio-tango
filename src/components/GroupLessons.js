@@ -19,12 +19,12 @@ const GroupLessons = () => {
         <ClassName>
           <h4>Tango for Advanced Dancers</h4>
           <Deutsch>
-            <h4>/Tango für Fortgeschrittene</h4>
+            <h4>Tango für Fortgeschrittene</h4>
           </Deutsch>
           <Dia>
             <p>Tuesday </p>
             <Deutsch>
-              <p>/Dienstag</p>
+              <p>Dienstag</p>
             </Deutsch>
             <Horario>
               <p>20.30 - 22.00</p>
@@ -35,12 +35,12 @@ const GroupLessons = () => {
         <ClassName>
           <h4>Beginners</h4>
           <Deutsch>
-            <h4>/Anfängers</h4>
+            <h4>Anfängers</h4>
           </Deutsch>
           <Dia>
             <p>Wednesday </p>
             <Deutsch>
-              <p>/Mittwoch</p>
+              <p>Mittwoch</p>
             </Deutsch>
             <Horario>
               <p>19.30 - 20.30</p>
@@ -51,12 +51,12 @@ const GroupLessons = () => {
         <ClassName>
           <h4>Advanced Training</h4>
           <Deutsch>
-            <h4>/Training für Fortgeschrittene</h4>
+            <h4>Training für Fortgeschrittene</h4>
           </Deutsch>
           <Dia>
             <p>Wednesday </p>
             <Deutsch>
-              <p>/Mittwoch</p>
+              <p>Mittwoch</p>
             </Deutsch>
             <Horario>
               <p>20.30 - 22.00</p>
@@ -67,36 +67,36 @@ const GroupLessons = () => {
         <ClassTopic>
           <p>Technique for couples</p>
           <Deutsch>
-            <p>/Technik für Paare</p>
+            <p>Technik für Paare</p>
           </Deutsch>
           <br />
           <p>Price: 18€</p>
           <Deutsch>
-            <p>/Preis: 18€</p>
+            <p>Preis: 18€</p>
           </Deutsch>
         </ClassTopic>
 
         <ClassTopic>
           <p>Intro to Tango and refreshing if you need!</p>
           <Deutsch>
-            <p>/Einführung und wiedereinsteigen!</p>
+            <p>Einführung und wiedereinsteigen!</p>
           </Deutsch>
           <br />
           <p>Price: 15€ / Urban Sport</p>
           <Deutsch>
-            <p>/Preis: 15€/ Urban Sport</p>
+            <p>Preis: 15€/ Urban Sport</p>
           </Deutsch>
         </ClassTopic>
 
         <ClassTopic>
           <p>Technique, Improvisation, Practice</p>
           <Deutsch>
-            <p>/Technik, Impro, Übungen</p>
+            <p>Technik, Impro, Übungen</p>
           </Deutsch>
           <br />
           <p>Price: 18€</p>
           <Deutsch>
-            <p>/Preis: 18€</p>
+            <p>Preis: 18€</p>
           </Deutsch>
         </ClassTopic>
       </Classes>
@@ -110,11 +110,11 @@ const GroupLessons = () => {
 export default GroupLessons;
 
 const Deutsch = styled.div`
-  color: var(--main-deutsch-color) !important;
-
-  .deutsch-black {
-    font-size: 1.3rem;
-    color: var(--main-deutsch-color) !important;
+  font-size: 0.8rem;
+  p,
+  h4,
+  h3 {
+    color: var(--main-black-color) !important;
   }
 `;
 
@@ -169,7 +169,6 @@ const Horario = styled.div`
 `;
 
 const ClassTopic = styled.div`
-  margin-top: 50px;
   p {
     color: var(--main-white-color);
     line-height: 1.6rem;
@@ -219,4 +218,5 @@ const Classes = styled.div`
   grid-template-rows: auto auto auto;
   grid-template-areas: "class details" "class details" "class details";
   grid-row-gap: 100px;
+  align-items: center;
 `;

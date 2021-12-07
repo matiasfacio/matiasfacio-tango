@@ -36,13 +36,10 @@ export default function Gallery() {
 }
 
 const StyledSection = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
   min-height: 80vh;
   width: 80vw;
-
+  display: none;
   h2 {
     font-size: 5rem;
     letter-spacing: -4px;
@@ -81,6 +78,11 @@ const StyledSection = styled.div`
         transition: all 250ms ease-in-out;
       }
     `}
+  @media (min-width:700px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const StylesBox = styled.div`

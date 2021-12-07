@@ -23,7 +23,7 @@ export default function ClassesBerlin() {
               <ClassName>
                 <h4>Book your spot for a private class</h4>
                 <Deutsch>
-                  <h4>/Sichere dir deinen Platz für eine Einzelstunde</h4>
+                  <h4>Sichere dir deinen Platz für eine Einzelstunde</h4>
                 </Deutsch>
 
                 <ClassTopic>
@@ -79,11 +79,11 @@ export default function ClassesBerlin() {
 }
 
 const Deutsch = styled.div`
-  color: var(--main-deutsch-color) !important;
-
-  .deutsch-black {
-    font-size: 1.3rem;
-    color: var(--main-deutsch-color) !important;
+  font-size: 0.8rem;
+  p,
+  h4,
+  h3 {
+    color: var(--main-black-color) !important;
   }
 `;
 

@@ -182,11 +182,11 @@ export default function ClassesBerlin() {
 }
 
 const Deutsch = styled.div`
-  color: var(--main-deutsch-color) !important;
-
-  .deutsch-black {
-    font-size: 1.3rem;
-    color: var(--main-deutsch-color) !important;
+  font-size: 1.3rem;
+  p,
+  h4,
+  h3 {
+    color: var(--main-black-color) !important;
   }
 `;
 
@@ -198,6 +198,7 @@ const Title = styled.div`
     color: var(--main-black-color);
     font-weight: bolder;
     font-family: "Roboto Black";
+    font-size: clamp(2rem, 4vw, 4em) !important;
   }
 `;
 

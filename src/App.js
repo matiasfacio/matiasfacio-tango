@@ -65,7 +65,7 @@ html {
 }
 
 h2 {
-  font-size: 4em;
+  font-size: clamp(2rem, 4vw, 4em);
   color: var(--main-white-color);
   margin: 0;
   padding: 0;
@@ -101,6 +101,7 @@ a {
 
 .deutsch {
   color: var(--main-deutsch-color) !important;
+
 }
 
 .deutsch-black {

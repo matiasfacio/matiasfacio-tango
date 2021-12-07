@@ -4,6 +4,27 @@ import styled from "styled-components";
 const Menu = () => {
   const [menuVisibility, setMenuVisibility] = useState(false);
 
+  useEffect(() => {
+    const logomenu = document.querySelector("#menuButton");
+    const mainMenu = document.querySelector("#mainMenu");
+
+    const hideMenu = () => {
+      mainMenu.style.transform = "translate(100vw, 0)";
+    };
+
+    const showMenu = () => {
+      mainMenu.style.transform = "translate(0vw,0)";
+      mainMenu.addEventListener("click", () => hideMenu());
+    };
+
+    logomenu.addEventListener("click", () => showMenu());
+
+    return () => {
+      logomenu.removeEventListener("click", () => showMenu());
+      mainMenu.removeEventListener("click", hideMenu);
+    };
+  });
+
   const showMenu = () => {
     setMenuVisibility(!menuVisibility);
   };
@@ -25,10 +46,10 @@ const Menu = () => {
 
   return (
     <div>
-      <ButtonMenu onClick={showMenu} visible={menuVisibility}>
+      <ButtonMenu onClick={showMenu} visible={menuVisibility} id="menuButton">
         <p>Menu</p>
       </ButtonMenu>
-      <StyledMenu visible={menuVisibility}>
+      <StyledMenu visible={menuVisibility} id="mainMenu">
         <ul>
           <li onClick={clickandhide}>
             <a href={"./index.html#"}>Home</a>
@@ -84,7 +105,8 @@ const StyledMenu = styled.nav`
   top: 0;
   right: 0;
   height: 100vh;
-  width: 50vw;
+  width: 100vw;
+  transform: translateX(100vw);
   background-color: var(--main-bg-color);
   display: ${({ visible }) => (visible ? "block" : "none")};
   @media (min-width: 850px) {
@@ -94,6 +116,7 @@ const StyledMenu = styled.nav`
     justify-content: center;
     align-items: center;
     width: 100vw;
+    transform: translateX(0vw);
     display: ${({ visible }) => (visible ? "block" : "none")};
     border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
   }

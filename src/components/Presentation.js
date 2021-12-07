@@ -1,15 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Deletrear from "../components/Deletrear.js";
 import styled, { keyframes } from "styled-components";
 
 const Presentation = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
     const handleScroll = (e) => {
       const target = document.querySelectorAll(".scroll");
       const subTitulo = document.querySelector("#subTitulo");
       let scrolled = e.path[1].scrollY;
 
-      if (scrolled < 1000) {
+      if (scrolled < windowWidth) {
         let rateA = scrolled * 1.5;
         let rateB = scrolled * 1.3;
         let rateC = scrolled * -1;
@@ -26,6 +27,14 @@ const Presentation = () => {
     };
     window.addEventListener("scroll", (e) => handleScroll(e));
     return window.removeEventListener("scroll", handleScroll);
+  });
+
+  useEffect(() => {
+    const setNewSize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", setNewSize);
+    return window.removeEventListener("resize", setNewSize);
   });
 
   return (
@@ -76,6 +85,10 @@ const StyledSection = styled.div`
   align-items: center;
   cursor: default;
 
+  h4 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    text-align: center;
+  }
   ul {
     display: flex;
     justify-content: flex-start;
@@ -90,7 +103,7 @@ const StyledSection = styled.div`
     cursor: default;
     font-family: bolder, sans-serif;
     letter-spacing: 5px;
-    font-size: 9rem;
+    font-size: clamp(3rem, 6vw, 9rem);
     font-family: "Six Caps";
     background: linear-gradient(
       to left,
