@@ -6,9 +6,9 @@ import AboutMe from "./components/AboutMe";
 import PrivateLessons from "./components/PrivateLessons";
 import Choreography from "./components/Choreography";
 import Contact from "./components/Contact";
-import AppConditionalRendering from "./components/AppConditionalRendering";
 import styled, { createGlobalStyle } from "styled-components";
 import GroupLessons from "./components/GroupLessons";
+import WeatherWidget from "./components/WeatherWidget";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -34,6 +34,7 @@ export const GlobalStyle = createGlobalStyle`
 
 html {
   --main-bg-color: #83af9b;
+  --secondary-bg-color: #688c7c;
   --main-lightblue-color: rgb(109, 108, 108);
   --main-deutsch-color: black;
   --main-black-color: black;
@@ -73,7 +74,7 @@ h2 {
 }
 
 h3 {
-  font-size: 3em;
+  font-size: clamp(1.1rem, 2vw, 3em);
   color: var(--main-white-color);
   margin: 0;
   font-family: "Roboto Light";
@@ -131,7 +132,7 @@ function App() {
         <Menu />
         <Presentation />
         <Gallery />
-        <AppConditionalRendering />
+        <WeatherWidget />
         <GroupLessons />
         <PrivateLessons />
         <Choreography />

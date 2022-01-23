@@ -1,57 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Deletrear from "../components/Deletrear.js";
 import styled, { keyframes } from "styled-components";
 
 const Presentation = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    const handleScroll = (e) => {
-      const target = document.querySelectorAll(".scroll");
-      const subTitulo = document.querySelector("#subTitulo");
-      let scrolled = e.path[1].scrollY;
-
-      if (scrolled < windowWidth) {
-        let rateA = scrolled * 1.5;
-        let rateB = scrolled * 1.3;
-        let rateC = scrolled * -1;
-        let rateD = scrolled * -2;
-
-        target[0].style.transform = `translate3D(${rateA}px, 0px, 0px)`;
-        target[1].style.transform = `translate3D(${rateA}px,${rateB}px, 0px)`;
-        target[2].style.transform = `translate3D(0px, ${rateC}px, 0px)`;
-        target[3].style.transform = `translate3D(${rateD}px, 0px , 0px)`;
-        subTitulo.style.transform = `translate3D(0px, ${
-          rateA * -1
-        }px, 0px) rotateX(${rateA * 1.5}deg)`;
-      }
-    };
-    window.addEventListener("scroll", (e) => handleScroll(e));
-    return window.removeEventListener("scroll", handleScroll);
-  });
-
-  useEffect(() => {
-    const setNewSize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", setNewSize);
-    return window.removeEventListener("resize", setNewSize);
-  });
+  const handleClick = () => {
+    document.body.scrollBy(0, window.innerHeight - 100);
+    document.documentElement.scrollBy(0, window.innerHeight - 100);
+  };
 
   return (
     <StyledSection>
       <ul>
-        <li className="scroll">Mat</li>
-        <li className="scroll">ias</li>
-        <li className="scroll">&nbsp;</li>
-        <li className="scroll">Fac</li>
-        <li className="scroll">io</li>
+        <li>Mat</li>
+        <li>ias</li>
+        <li>&nbsp;</li>
+        <li>Fac</li>
+        <li>io</li>
       </ul>
-
       <h4 id="subTitulo">
         <Deletrear />
       </h4>
-
-      <Flecha></Flecha>
+      <Flecha onClick={handleClick}></Flecha>
     </StyledSection>
   );
 };

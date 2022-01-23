@@ -17,7 +17,7 @@ export default function AboutMe() {
           <h2>About me</h2>
           <h3 className="deutsch">/Über mich</h3>
         </Title>
-        <Details>
+        <CardsContainer>
           <Card>
             <CircledImageContainer>
               <CircledImage backgroundImage={images[0]} />
@@ -81,7 +81,7 @@ export default function AboutMe() {
               Social Dance (Milongas). Komm!
             </p>
           </Card>
-        </Details>
+        </CardsContainer>
         <div className="separador"></div>
       </StyledSection>
     </Container>
@@ -89,25 +89,25 @@ export default function AboutMe() {
 }
 
 const CircledImageContainer = styled.div`
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
   background-color: var(--main-bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   margin: 50px 0;
+  overflow: hidden;
+  border: 3px transparent solid;
   &:hover {
-    background-color: whitesmoke;
+    border-color: whitesmoke;
   }
 `;
 
 const CircledImage = styled.div`
-  border-radius: 50%;
-  height: 270px;
-  width: 270px;
+  height: 100%;
+  width: 100%;
   position: relative;
-  overflow: hidden;
   &::after {
     position: absolute;
     content: "";
@@ -131,7 +131,7 @@ const CircledImage = styled.div`
 `;
 
 const Container = styled.div`
-  max-width: 1440px;
+  max-width: 1200px;
 `;
 
 const StyledSection = styled.div`
@@ -139,7 +139,7 @@ const StyledSection = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 100%;
+  max-width: 1200px;
 
   h3 {
     font-family: "Roboto Black";
@@ -159,7 +159,7 @@ const Title = styled.div`
   flex-direction: column;
 `;
 
-const Details = styled.div`
+const CardsContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -168,21 +168,24 @@ const Details = styled.div`
   margin-top: 10vh;
   padding: 2em;
   margin: 0 auto;
+  gap: 20px;
 `;
 
 const Card = styled.div`
-  width: 300px;
+  padding: 10px;
   position: relative;
   border-top: none;
   border-bottom: none;
   border-left: none;
   display: flex;
   flex-shrink: 1;
-  flex-grow: 0;
-  margin: 0 20px;
+  flex-grow: 1;
+  flex-basis: 200px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 10px var(--secondary-bg-color);
+
   #ultima {
     border-right: none;
   }

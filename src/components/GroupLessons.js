@@ -169,6 +169,9 @@ const Horario = styled.div`
 `;
 
 const ClassTopic = styled.div`
+  padding: 10px;
+  box-shadow: 0 0 10px var(--secondary-bg-color);
+  width: fit-content;
   p {
     color: var(--main-white-color);
     line-height: 1.6rem;
@@ -186,6 +189,22 @@ const ClassTopic = styled.div`
   &:nth-of-type(3) {
     grid-row: 3/4;
     grid-column: 2 / 3;
+  }
+  @media (max-width: 800px) {
+    margin-left: 50px;
+
+    &:nth-of-type(1) {
+      grid-row: 2/3;
+      grid-column: 1 / 1;
+    }
+    &:nth-of-type(2) {
+      grid-row: 4/5;
+      grid-column: 1 / 1;
+    }
+    &:nth-of-type(3) {
+      grid-row: 6/7;
+      grid-column: 1 / 1;
+    }
   }
 `;
 
@@ -208,6 +227,22 @@ const ClassName = styled.div`
     grid-row: 3/4;
     grid-column: 1 / 2;
   }
+  @media (max-width: 800px) {
+    text-align: left;
+    padding: 20px;
+    &:nth-of-type(1) {
+      grid-row: 1/2;
+      grid-column: 1 / 1;
+    }
+    &:nth-of-type(2) {
+      grid-row: 3/4;
+      grid-column: 1 / 1;
+    }
+    &:nth-of-type(3) {
+      grid-row: 5/6;
+      grid-column: 1 / 1;
+    }
+  }
 `;
 
 const Classes = styled.div`
@@ -219,4 +254,11 @@ const Classes = styled.div`
   grid-template-areas: "class details" "class details" "class details";
   grid-row-gap: 100px;
   align-items: center;
+  @media (max-width: 800px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "class" "details";
+    grid-row-gap: 50px;
+  }
 `;

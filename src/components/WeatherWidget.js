@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const APPID = process.env.REACT_APP_APP_ID;
 
-export default function AppConditionalRendering() {
+export default function WeatherWidget() {
   const [isLoading, setIsLoading] = React.useState(false);
   const [weather, setWeather] = React.useState(null);
 
@@ -26,23 +26,10 @@ export default function AppConditionalRendering() {
     fetchWeather();
   }, []);
 
-  const styleTemp = {
-    backgroundColor: "black",
-    width: "180px",
-    textAlign: "center",
-    height: "180px",
-    borderRadius: "50%",
-    borderRight: "3px white solid",
-    borderBottom: "3px white solid",
-    fontFamily: "sans-serif",
-    marginBottom: "30px",
-  };
-
   const styleCelCold = {
     fontSize: "3em",
     color: "white",
     lineHeight: "35px",
-    transform: "translateY(70px)",
     fontFamily: "Roboto Black",
   };
 
@@ -50,47 +37,60 @@ export default function AppConditionalRendering() {
     fontSize: "3em",
     color: "red",
     lineHeight: "35px",
-    transform: "translateY(70px)",
     fontFamily: "Roboto Black",
-  };
-
-  const styleP = {
-    color: "white",
-    fontWeight: "bolder",
-    fontFamily: "Roboto Black",
-    fontSize: "2em",
-    marginBottom: "50px",
-  };
-
-  const styleMessage = {
-    color: "#8cccfa",
-    backgroundColor: "black",
-    fontFamily: "Roboto Black",
-    borderRadius: "20px",
-    fontSize: "2em",
-    padding: "20px",
   };
 
   return (
     <StyledSection>
-      <p style={styleP}>
+      <Title>
         {isLoading ? "loading..." : "Temperature in Berlin feels like: "}
-      </p>
-      <div style={styleTemp}>
+      </Title>
+      <TempContainer>
         <p style={weather < 18 ? styleCelCold : styleCelHot}>{weather}º</p>
-      </div>
-      <p style={styleMessage}>
+      </TempContainer>
+      <Message>
         <DisplayMessage objetoWeather={weather} />
-      </p>
+      </Message>
     </StyledSection>
   );
 }
 
 const StyledSection = styled.div`
   min-height: 100vh;
-  margin-top: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 20px;
+`;
+
+const Title = styled.div`
+  color: white;
+  font-weight: bolder;
+  font-family: "Roboto Black";
+  font-size: clamp(1.8rem, 2vw, 2em);
+  margin-bottom: 50px;
+  text-align: center;
+  line-height: 1.6;
+`;
+
+const TempContainer = styled.div`
+  background-color: black;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  font-family: sans-serif;
+  display: grid;
+  place-content: center;
+  margin-bottom: 20px;
+`;
+
+const Message = styled.div`
+  color: #8cccfa;
+  background-color: black;
+  font-family: "Roboto Black";
+  border-radius: 20px;
+  font-size: 1.5em;
+  padding: 20px;
+  text-align: center;
 `;

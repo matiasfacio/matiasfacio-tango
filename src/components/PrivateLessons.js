@@ -187,7 +187,6 @@ const Address = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-
   h3 {
     font-size: 3rem;
     max-width: 12ch;

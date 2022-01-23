@@ -86,6 +86,7 @@ const StyledSection = styled.div`
   justify-content: center;
   align-items: center;
   padding: 100px;
+  max-width: 1200px;
   p {
     color: var(--main-white-color);
     line-height: 1.6rem;

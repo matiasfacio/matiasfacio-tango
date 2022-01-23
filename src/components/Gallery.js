@@ -38,7 +38,8 @@ export default function Gallery() {
 const StyledSection = styled.div`
   position: relative;
   min-height: 80vh;
-  width: 80vw;
+  width: clamp(650px, 80vw, 1200px);
+  width: 100vw;
   display: none;
   h2 {
     font-size: 5rem;

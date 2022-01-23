@@ -3,7 +3,10 @@ import styled from "styled-components";
 
 const Menu = () => {
   const [menuVisibility, setMenuVisibility] = useState(false);
+  const [menuVisibilityOnScroll, setMenuVisibilityOnScroll] = useState(false);
 
+  /* 
+  
   useEffect(() => {
     const logomenu = document.querySelector("#menuButton");
     const mainMenu = document.querySelector("#mainMenu");
@@ -24,6 +27,7 @@ const Menu = () => {
       mainMenu.removeEventListener("click", hideMenu);
     };
   });
+  */
 
   const showMenu = () => {
     setMenuVisibility(!menuVisibility);
@@ -35,9 +39,9 @@ const Menu = () => {
   useEffect(() => {
     const handleScroll = (e) => {
       if (e.path[1].scrollY > 400) {
-        setMenuVisibility(true);
+        setMenuVisibilityOnScroll(true);
       } else {
-        setMenuVisibility(false);
+        setMenuVisibilityOnScroll(false);
       }
     };
     window.addEventListener("scroll", (e) => handleScroll(e));
@@ -46,10 +50,14 @@ const Menu = () => {
 
   return (
     <div>
-      <ButtonMenu onClick={showMenu} visible={menuVisibility} id="menuButton">
+      <ButtonMenu onClick={showMenu} id="menuButton">
         <p>Menu</p>
       </ButtonMenu>
-      <StyledMenu visible={menuVisibility} id="mainMenu">
+      <StyledMenu
+        visible={menuVisibility}
+        visibleOnScroll={menuVisibilityOnScroll}
+        id="mainMenu"
+      >
         <ul>
           <li onClick={clickandhide}>
             <a href={"./index.html#"}>Home</a>
@@ -106,9 +114,8 @@ const StyledMenu = styled.nav`
   right: 0;
   height: 100vh;
   width: 100vw;
-  transform: translateX(100vw);
   background-color: var(--main-bg-color);
-  display: ${({ visible }) => (visible ? "block" : "none")};
+  ${({ visible }) => (visible ? "display:block" : "display:none")};
   @media (min-width: 850px) {
     height: 70px;
     display: flex;
@@ -116,8 +123,8 @@ const StyledMenu = styled.nav`
     justify-content: center;
     align-items: center;
     width: 100vw;
-    transform: translateX(0vw);
-    display: ${({ visible }) => (visible ? "block" : "none")};
+    ${({ visibleOnScroll }) =>
+      visibleOnScroll ? "display:block" : "display: none"};
     border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
   }
 
