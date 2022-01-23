@@ -11,69 +11,58 @@ export default function ClassesBerlin() {
   };
 
   return (
-    <Classes id="classes">
-      <Classes>
-        <Title>
-          <h2>Private lessons</h2>
-          <h3>/Privatunterricht</h3>
-        </Title>
-        <PrivateLessons>
-          <Class>
-            <ClassWithoutButton>
-              <ClassName>
-                <h4>Book your spot for a private class</h4>
-                <Deutsch>
-                  <h4>Sichere dir deinen Platz für eine Einzelstunde</h4>
-                </Deutsch>
+    <Classes>
+      <Title>
+        <h2>Private lessons</h2>
+        <h3>/Privatunterricht</h3>
+      </Title>
+      <PrivateLessons>
+        <Class>
+          <ClassWithoutButton>
+            <ClassName>
+              <h4>Book your spot for a private class</h4>
+              <Deutsch>
+                <h4>Sichere dir deinen Platz für eine Einzelstunde</h4>
+              </Deutsch>
 
-                <ClassTopic>
-                  <p>Technique, Musicality, Concepts, Improvisation</p>
-                </ClassTopic>
-              </ClassName>
+              <ClassTopic>
+                <p>Technique, Musicality, Concepts, Improvisation</p>
+              </ClassTopic>
+            </ClassName>
 
-              <Dia>
-                <p>Monday / Tuesday / Friday</p>
-                <Deutsch>
-                  <p>Montag / Dienstag / Freitag</p>
-                </Deutsch>
-                <Horario>
-                  <p>11.00 - 13.00</p>
-                </Horario>
-              </Dia>
+            <Dia>
+              <p>Monday / Tuesday / Friday</p>
+              <Deutsch>
+                <p>Montag / Dienstag / Freitag</p>
+              </Deutsch>
+              <Horario>
+                <p>11.00 - 13.00</p>
+              </Horario>
+            </Dia>
 
-              <Dia>
-                <p>Saturday</p>
-                <Deutsch>
-                  <p>Samstag</p>
-                </Deutsch>
-                <Horario>
-                  <p>16.00 - 19.00</p>
-                </Horario>
-              </Dia>
+            <Dia>
+              <p>Saturday</p>
+              <Deutsch>
+                <p>Samstag</p>
+              </Deutsch>
+              <Horario>
+                <p>16.00 - 19.00</p>
+              </Horario>
+            </Dia>
 
-              <Dia>
-                <p>Sunday</p>
-                <Deutsch>
-                  <p>Sonntag</p>
-                </Deutsch>
-                <Horario>
-                  <p>13.00 - 17.00</p>
-                </Horario>
-              </Dia>
-            </ClassWithoutButton>
-          </Class>
-        </PrivateLessons>
-        <PrivateClassButton onClick={sendEmail}>Book now!</PrivateClassButton>
-      </Classes>
-      <Address>
-        <Title>
-          <h2>Address in Berlin</h2>
-          <Deutsch>
-            <h3>/Adresse</h3>
-          </Deutsch>
-        </Title>
-        <p>Bühnenreif! Immanuelkirchstrasse 6, 10405 Berlin</p>
-      </Address>
+            <Dia>
+              <p>Sunday</p>
+              <Deutsch>
+                <p>Sonntag</p>
+              </Deutsch>
+              <Horario>
+                <p>13.00 - 17.00</p>
+              </Horario>
+            </Dia>
+          </ClassWithoutButton>
+        </Class>
+      </PrivateLessons>
+      <PrivateClassButton onClick={sendEmail}>Book now!</PrivateClassButton>
     </Classes>
   );
 }
@@ -180,33 +169,4 @@ const Classes = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-`;
-
-const Address = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  h3 {
-    font-size: 3rem;
-    max-width: 12ch;
-    font-family: "Roboto Black";
-    color: var(--main-white-color);
-  }
-
-  p {
-    color: var(--main-white-color);
-    font-size: 1.3rem;
-    padding: 50px;
-    font-family: sans-serif;
-    position: relative;
-    ::before {
-      position: absolute;
-      content: "";
-      height: 10px;
-      width: 10px;
-      background-color: var(--main-white-color);
-      transform: translate(-20px, 5px);
-    }
-  }
 `;

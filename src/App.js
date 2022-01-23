@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import styled, { createGlobalStyle } from "styled-components";
 import GroupLessons from "./components/GroupLessons";
 import WeatherWidget from "./components/WeatherWidget";
+import { Address } from "./components/Address";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -135,6 +136,7 @@ function App() {
         <WeatherWidget />
         <GroupLessons />
         <PrivateLessons />
+        <Address />
         <Choreography />
         <AboutMe />
         <Contact />
