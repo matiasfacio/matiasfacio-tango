@@ -66,7 +66,7 @@ const ContactDetailPhone = styled.div`
 `;
 
 const StyledSection = styled.div`
-  background-color: var(--main-black-color);
+  background-color: var(--secondary-color);
   width: 100vw;
   min-height: 100vh;
   display: flex;
@@ -76,7 +76,7 @@ const StyledSection = styled.div`
   align-items: center;
 
   .socialMediaInfo a {
-    color: var(--main-black-color);
+    color: var(--secondary-color);
     font-size: 1.5rem;
     margin-left: 10px;
     font-family: sans-serif;

@@ -35,4 +35,9 @@ const Deletrear = () => {
 
 export default Deletrear;
 
-const Letter = styled.p``;
+const Letter = styled.p`
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  text-align: center;
+  color: var(--secondary-color);
+  font-family: sans-serif;
+`;

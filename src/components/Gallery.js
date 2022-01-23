@@ -72,10 +72,10 @@ const StyledSection = styled.div`
         background-blend-mode: luminosity;
         background-attachment: fixed;
         background-repeat: repeat-x;
-        background-color: black;
+        background-color: var(--secondary-color);
         border-radius: 20px;
-        border-top: 3px black solid;
-        border-bottom: 3px black solid;
+        border-top: 3px var(--secondary-color) solid;
+        border-bottom: 3px var(--secondary-color) solid;
         transition: all 250ms ease-in-out;
       }
     `}

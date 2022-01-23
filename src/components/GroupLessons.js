@@ -114,7 +114,7 @@ const Deutsch = styled.div`
   p,
   h4,
   h3 {
-    color: var(--main-black-color) !important;
+    color: var(--secondary-color) !important;
   }
 `;
 
@@ -124,14 +124,14 @@ const Title = styled.div`
   flex-direction: column;
   align-items: center;
   h3 {
-    color: var(--main-black-color);
+    color: var(--secondary-color);
     font-weight: bolder;
     font-family: "Roboto Black";
   }
 `;
 
 const BookAClassButton = styled.button`
-  background-color: var(--main-deutsch-color);
+  background-color: var(--secondary-color);
   color: var(--main-buttonText-color);
   width: 300px;
   height: auto;

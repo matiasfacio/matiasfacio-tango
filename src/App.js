@@ -41,6 +41,7 @@ html {
   --main-black-color: black;
   --main-white-color: white;
   --main-title-color: #fff;
+  --secondary-color: #1a231f;
   --main-buttonText-color: #8cccfa;
   --main-title-footer: #83af9b;
   --footer-title: #fff;
@@ -63,7 +64,7 @@ html {
 
   h1 {
   font-size: 10em;
-  color: var(--main-black-color);
+  color: var(--secondary-color);
 }
 
 h2 {
@@ -102,13 +103,13 @@ a {
 }
 
 .deutsch {
-  color: var(--main-deutsch-color) !important;
+  color: var(--secondary-color) !important;
 
 }
 
 .deutsch-black {
   font-size: 1.3rem;
-  color: var(--main-deutsch-color) !important;
+  color: var(--secondary-color) !important;
 }
 
 /* Menu principal */
@@ -119,7 +120,7 @@ a {
 }
 
 a:active {
-  color: var(--main-black-color);
+  color: var(--secondary-color);
   background-color: var(--main-white-color);
 }
 

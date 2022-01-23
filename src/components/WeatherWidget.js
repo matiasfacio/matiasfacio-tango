@@ -75,7 +75,7 @@ const Title = styled.div`
 `;
 
 const TempContainer = styled.div`
-  background-color: black;
+  background-color: var(--secondary-color);
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -87,7 +87,7 @@ const TempContainer = styled.div`
 
 const Message = styled.div`
   color: #8cccfa;
-  background-color: black;
+  background-color: var(--secondary-color);
   font-family: "Roboto Black";
   border-radius: 20px;
   font-size: 1.5em;

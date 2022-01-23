@@ -21,7 +21,7 @@ const Deutsch = styled.div`
   p,
   h4,
   h3 {
-    color: var(--main-black-color) !important;
+    color: var(--secondary-color) !important;
   }
   margin-bottom: 50px;
 `;
@@ -31,7 +31,7 @@ const Title = styled.div`
   flex-direction: column;
   align-items: center;
   h3 {
-    color: var(--main-black-color);
+    color: var(--secondary-color);
     font-weight: bolder;
     font-family: "Roboto Black";
   }

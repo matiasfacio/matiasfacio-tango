@@ -10,16 +10,8 @@ const Presentation = () => {
 
   return (
     <StyledSection>
-      <ul>
-        <li>Mat</li>
-        <li>ias</li>
-        <li>&nbsp;</li>
-        <li>Fac</li>
-        <li>io</li>
-      </ul>
-      <h4 id="subTitulo">
-        <Deletrear />
-      </h4>
+      <Title>Matias Facio</Title>
+      <Deletrear />
       <Flecha onClick={handleClick}></Flecha>
     </StyledSection>
   );
@@ -39,11 +31,29 @@ const bajarSubirFlecha = keyframes`
 
 const Flecha = styled.div`
   margin-top: 100px;
-  background-color: var(--main-deutsch-color);
+  background-color: var(--secondary-color);
   height: 30px;
   width: 50px;
   clip-path: polygon(100% 0, 0 0, 50% 100%);
   animation: ${bajarSubirFlecha} 1s infinite;
+`;
+
+const Title = styled.div`
+  color: transparent;
+  z-index: 98;
+  cursor: default;
+  font-family: bolder, sans-serif;
+  letter-spacing: 5px;
+  font-size: clamp(3rem, 6vw, 9rem);
+  font-family: "Six Caps";
+  font-weight: bolder;
+  background: linear-gradient(
+    to right,
+    var(--main-title-color),
+    var(--main-title-color)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
 `;
 
 const StyledSection = styled.div`
@@ -53,33 +63,4 @@ const StyledSection = styled.div`
   justify-content: center;
   align-items: center;
   cursor: default;
-
-  h4 {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    text-align: center;
-  }
-  ul {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    list-style: none;
-    font-weight: bolder;
-  }
-
-  li {
-    color: transparent;
-    z-index: 98;
-    cursor: default;
-    font-family: bolder, sans-serif;
-    letter-spacing: 5px;
-    font-size: clamp(3rem, 6vw, 9rem);
-    font-family: "Six Caps";
-    background: linear-gradient(
-      to left,
-      var(--main-title-color),
-      var(--main-title-color)
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-  }
 `;

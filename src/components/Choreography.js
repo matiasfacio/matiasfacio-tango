@@ -50,7 +50,7 @@ const ChoreographyContent = styled.div`
 `;
 
 const PrivateClassButton = styled.button`
-  background-color: var(--main-deutsch-color);
+  background-color: var(--secondary-color);
   color: var(--main-buttonText-color);
   width: 300px;
   height: auto;
