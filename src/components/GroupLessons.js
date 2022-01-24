@@ -191,7 +191,7 @@ const ClassTopic = styled.div`
     grid-column: 2 / 3;
   }
   @media (max-width: 800px) {
-    margin-left: 50px;
+    padding: 10px;
 
     &:nth-of-type(1) {
       grid-row: 2/3;
