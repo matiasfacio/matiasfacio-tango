@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Title } from "./Title";
 
 const GroupLessons = () => {
   const sendEmail = () => {
@@ -110,23 +111,16 @@ const GroupLessons = () => {
 export default GroupLessons;
 
 const Deutsch = styled.div`
-  font-size: 0.8rem;
-  p,
   h4,
   h3 {
     color: var(--secondary-color) !important;
   }
-`;
-
-const Title = styled.div`
-  grid-area: class;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  h3 {
-    color: var(--secondary-color);
-    font-weight: bolder;
-    font-family: "Roboto Black";
+  h4 {
+    font-size: clamp(1.1rem, 2vw, 1.5rem) !important;
+  }
+  p {
+    font-size: clamp(1rem, 1.5vw, 1.5rem) !important;
+    color: var(--secondary-color) !important;
   }
 `;
 
@@ -151,9 +145,9 @@ const BookAClassButton = styled.button`
 
 const Dia = styled.div`
   p {
-    font-family: monospace;
+    font-family: sans-serif;
     font-weight: bolder;
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1.5vw, 2.5em);
     padding-left: 0px;
     padding-top: 10px;
     display: inline-block;
@@ -170,7 +164,6 @@ const Horario = styled.div`
 
 const ClassTopic = styled.div`
   padding: 10px;
-  box-shadow: 0 0 10px var(--secondary-bg-color);
   width: fit-content;
   p {
     color: var(--main-white-color);
@@ -191,8 +184,8 @@ const ClassTopic = styled.div`
     grid-column: 2 / 3;
   }
   @media (max-width: 800px) {
-    padding: 10px;
-
+    padding: 0 2em;
+    margin-bottom: 50px;
     &:nth-of-type(1) {
       grid-row: 2/3;
       grid-column: 1 / 1;
@@ -211,6 +204,7 @@ const ClassTopic = styled.div`
 const ClassName = styled.div`
   padding-right: 30px;
   text-align: right;
+
   h4 {
     color: var(--main-white-color);
     font-family: "Roboto Medium";
@@ -229,7 +223,7 @@ const ClassName = styled.div`
   }
   @media (max-width: 800px) {
     text-align: left;
-    padding: 20px;
+    padding: 2em;
     &:nth-of-type(1) {
       grid-row: 1/2;
       grid-column: 1 / 1;
@@ -259,6 +253,6 @@ const Classes = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "class" "details";
-    grid-row-gap: 50px;
+    grid-row-gap: 0px;
   }
 `;

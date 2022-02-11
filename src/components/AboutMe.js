@@ -168,14 +168,14 @@ const CardsContainer = styled.div`
   margin-top: 10vh;
   padding: 2em;
   margin: 0 auto;
-  gap: 20px;
+  gap: 40px;
 `;
 
 const Card = styled.div`
   padding: 10px;
   position: relative;
   border-top: none;
-  border-bottom: none;
+  border-bottom: 2px var(--secondary-bg-color) solid;
   border-left: none;
   display: flex;
   flex-shrink: 1;
@@ -184,7 +184,6 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 10px var(--secondary-bg-color);
 
   #ultima {
     border-right: none;

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Title } from "./Title";
 
 export default function ClassesBerlin() {
   const sendEmail = () => {
@@ -14,7 +15,7 @@ export default function ClassesBerlin() {
     <Classes>
       <Title>
         <h2>Private lessons</h2>
-        <h3>/Privatunterricht</h3>
+        <h3 className="deutsch">/Privatunterricht</h3>
       </Title>
       <PrivateLessons>
         <Class>
@@ -74,16 +75,12 @@ const Deutsch = styled.div`
   h3 {
     color: var(--secondary-color) !important;
   }
-`;
-
-const Title = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  h3 {
-    color: var(--secondary-color);
-    font-weight: bolder;
-    font-family: "Roboto Black";
+  h4 {
+    font-size: clamp(1.1rem, 2vw, 1.5rem) !important;
+  }
+  p {
+    font-size: clamp(1rem, 1.5vw, 1.5rem) !important;
+    color: var(--secondary-color) !important;
   }
 `;
 

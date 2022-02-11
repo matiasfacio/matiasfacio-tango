@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Title } from "./Title";
 
 export default function Choreography() {
   const sendEmailChoreography = () => {
@@ -66,16 +67,6 @@ const PrivateClassButton = styled.button`
     border-color: var(--main-buttonText-color);
     color: var(--main-white-color);
     transform: translate(-5px, -5px);
-  }
-`;
-
-const Title = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  h3 {
-    font-family: "Roboto Black";
   }
 `;
 

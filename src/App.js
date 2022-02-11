@@ -33,7 +33,7 @@ export const GlobalStyle = createGlobalStyle`
   src: url("Roboto-Medium.ttf");
 }
 
-html {
+:root {
   --main-bg-color: #83af9b;
   --secondary-bg-color: #688c7c;
   --main-lightblue-color: rgb(109, 108, 108);
