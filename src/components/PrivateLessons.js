@@ -12,59 +12,61 @@ export default function ClassesBerlin() {
   };
 
   return (
-    <Classes>
-      <Title>
-        <h2>Private lessons</h2>
-        <h3 className="deutsch">/Privatunterricht</h3>
-      </Title>
-      <PrivateLessons>
-        <Class>
-          <ClassWithoutButton>
-            <ClassName>
-              <h4>Book your spot for a private class</h4>
-              <Deutsch>
-                <h4>Sichere dir deinen Platz für eine Einzelstunde</h4>
-              </Deutsch>
+    <>
+      <Classes>
+        <Title>
+          <h2>Private lessons</h2>
+          <h3 className="deutsch">/Privatunterricht</h3>
+        </Title>
+        <PrivateLessons>
+          <Class>
+            <ClassWithoutButton>
+              <ClassName>
+                <h4>Book your spot for a private class</h4>
+                <Deutsch>
+                  <h4>Sichere dir deinen Platz für eine Einzelstunde</h4>
+                </Deutsch>
 
-              <ClassTopic>
-                <p>Technique, Musicality, Concepts, Improvisation</p>
-              </ClassTopic>
-            </ClassName>
+                <ClassTopic>
+                  <p>Technique, Musicality, Concepts, Improvisation</p>
+                </ClassTopic>
+              </ClassName>
 
-            <Dia>
-              <p>Monday / Tuesday / Friday</p>
-              <Deutsch>
-                <p>Montag / Dienstag / Freitag</p>
-              </Deutsch>
-              <Horario>
-                <p>11.00 - 13.00</p>
-              </Horario>
-            </Dia>
+              <Dia>
+                <p>Monday / Tuesday / Friday</p>
+                <Deutsch>
+                  <p>Montag / Dienstag / Freitag</p>
+                </Deutsch>
+                <Horario>
+                  <p>11.00 - 13.00</p>
+                </Horario>
+              </Dia>
 
-            <Dia>
-              <p>Saturday</p>
-              <Deutsch>
-                <p>Samstag</p>
-              </Deutsch>
-              <Horario>
-                <p>16.00 - 19.00</p>
-              </Horario>
-            </Dia>
+              <Dia>
+                <p>Saturday</p>
+                <Deutsch>
+                  <p>Samstag</p>
+                </Deutsch>
+                <Horario>
+                  <p>16.00 - 19.00</p>
+                </Horario>
+              </Dia>
 
-            <Dia>
-              <p>Sunday</p>
-              <Deutsch>
-                <p>Sonntag</p>
-              </Deutsch>
-              <Horario>
-                <p>13.00 - 17.00</p>
-              </Horario>
-            </Dia>
-          </ClassWithoutButton>
-        </Class>
-      </PrivateLessons>
-      <PrivateClassButton onClick={sendEmail}>Book now!</PrivateClassButton>
-    </Classes>
+              <Dia>
+                <p>Sunday</p>
+                <Deutsch>
+                  <p>Sonntag</p>
+                </Deutsch>
+                <Horario>
+                  <p>13.00 - 17.00</p>
+                </Horario>
+              </Dia>
+            </ClassWithoutButton>
+          </Class>
+        </PrivateLessons>
+        <PrivateClassButton onClick={sendEmail}>Book now!</PrivateClassButton>
+      </Classes>
+    </>
   );
 }
 
@@ -87,14 +89,14 @@ const Deutsch = styled.div`
 const Class = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
-  margin: 50px;
+  margin: 0 2em;
   transition-duration: 1s;
 `;
 
 const PrivateLessons = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin-top: 50px;
 `;
 
 const PrivateClassButton = styled.button`

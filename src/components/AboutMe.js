@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import { Title } from "./Title";
 
 const images = [
   "https://res.cloudinary.com/matiasfacio/image/upload/v1638830489/MatiasFacio.com/1-low_j2dbaa.jpg",
@@ -10,9 +11,8 @@ const images = [
 
 export default function AboutMe() {
   return (
-    <Container>
+    <>
       <StyledSection id="aboutme">
-        <div className="separador"></div>
         <Title>
           <h2>About me</h2>
           <h3 className="deutsch">/Über mich</h3>
@@ -84,7 +84,7 @@ export default function AboutMe() {
         </CardsContainer>
         <div className="separador"></div>
       </StyledSection>
-    </Container>
+    </>
   );
 }
 
@@ -130,16 +130,13 @@ const CircledImage = styled.div`
   }
 `;
 
-const Container = styled.div`
-  max-width: 1200px;
-`;
-
 const StyledSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 1200px;
+  margin: 20vh 2em;
 
   h3 {
     font-family: "Roboto Black";
@@ -152,21 +149,13 @@ const StyledSection = styled.div`
   }
 `;
 
-const Title = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
-
 const CardsContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
-  margin-top: 10vh;
-  padding: 2em;
+  padding: 0 2em;
   margin: 0 auto;
   gap: 40px;
 `;

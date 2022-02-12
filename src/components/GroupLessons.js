@@ -11,7 +11,7 @@ const GroupLessons = () => {
     window.location.href = link;
   };
   return (
-    <>
+    <StyledSection>
       <Title>
         <h2>Classes in Berlin</h2>
         <h3>/Kurse in Berlin</h3>
@@ -104,7 +104,7 @@ const GroupLessons = () => {
       <BookAClassButton onClick={sendEmail}>
         Save your spot now!
       </BookAClassButton>
-    </>
+    </StyledSection>
   );
 };
 
@@ -128,14 +128,13 @@ const BookAClassButton = styled.button`
   background-color: var(--secondary-color);
   color: var(--main-buttonText-color);
   width: 300px;
-  height: auto;
   border-radius: 10px;
   border-width: 0px;
   border-color: var(--main-buttonText-color);
   padding: 10px 20px;
   font-size: 1.5rem;
   font-weight: bolder;
-
+  align-self: center;
   &:hover {
     border-color: var(--main-buttonText-color);
     color: var(--main-white-color);
@@ -163,7 +162,6 @@ const Horario = styled.div`
 `;
 
 const ClassTopic = styled.div`
-  padding: 10px;
   width: fit-content;
   p {
     color: var(--main-white-color);
@@ -184,7 +182,6 @@ const ClassTopic = styled.div`
     grid-column: 2 / 3;
   }
   @media (max-width: 800px) {
-    padding: 0 2em;
     margin-bottom: 50px;
     &:nth-of-type(1) {
       grid-row: 2/3;
@@ -223,7 +220,7 @@ const ClassName = styled.div`
   }
   @media (max-width: 800px) {
     text-align: left;
-    padding: 2em;
+
     &:nth-of-type(1) {
       grid-row: 1/2;
       grid-column: 1 / 1;
@@ -241,7 +238,7 @@ const ClassName = styled.div`
 
 const Classes = styled.div`
   width: 100%;
-  margin: 10vh auto;
+  margin: 50px auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto;
@@ -255,4 +252,11 @@ const Classes = styled.div`
     grid-template-areas: "class" "details";
     grid-row-gap: 0px;
   }
+`;
+
+const StyledSection = styled.section`
+  margin: 20vh 2em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 `;
