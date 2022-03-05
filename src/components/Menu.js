@@ -1,33 +1,18 @@
 import React, { useState, useEffect } from "react";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
-const Menu = () => {
+export const Menu = () => {
   const [menuVisibility, setMenuVisibility] = useState(false);
   const [menuVisibilityOnScroll, setMenuVisibilityOnScroll] = useState(false);
+  const { pathname } = useLocation();
 
-  /* 
-  
   useEffect(() => {
-    const logomenu = document.querySelector("#menuButton");
-    const mainMenu = document.querySelector("#mainMenu");
-
-    const hideMenu = () => {
-      mainMenu.style.transform = "translate(100vw, 0)";
-    };
-
-    const showMenu = () => {
-      mainMenu.style.transform = "translate(0vw,0)";
-      mainMenu.addEventListener("click", () => hideMenu());
-    };
-
-    logomenu.addEventListener("click", () => showMenu());
-
-    return () => {
-      logomenu.removeEventListener("click", () => showMenu());
-      mainMenu.removeEventListener("click", hideMenu);
-    };
-  });
-  */
+    if (pathname === "/tangoreise") {
+      setMenuVisibilityOnScroll(true);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [menuVisibilityOnScroll]);
 
   const showMenu = () => {
     setMenuVisibility(!menuVisibility);
@@ -60,27 +45,29 @@ const Menu = () => {
       >
         <ul>
           <li onClick={clickandhide}>
-            <a href={"./index.html#"}>Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li onClick={clickandhide}>
-            <a href={"#classes"}>Classes</a>
+            <a href={"/#classes"}>Classes</a>
           </li>
           <li onClick={clickandhide}>
-            <a href={"#choreography"}>Choreography</a>
+            <Link to="/tangoreise">Tango Reise</Link>
           </li>
           <li onClick={clickandhide}>
-            <a href={"#aboutme"}>About Me</a>
+            <a href={"/#choreography"}>Choreography</a>
           </li>
           <li onClick={clickandhide}>
-            <a href={"#contact"}>Contact</a>
+            <a href={"/#aboutme"}>About Me</a>
+          </li>
+          <li onClick={clickandhide}>
+            <a href={"/#contact"}>Contact</a>
           </li>
         </ul>
       </StyledMenu>
+      <Outlet />
     </div>
   );
 };
-
-export default Menu;
 
 const ButtonMenu = styled.div`
   position: fixed;

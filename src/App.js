@@ -1,15 +1,9 @@
 import React from "react";
-import Menu from "./components/Menu";
-import Presentation from "./components/Presentation";
-import Gallery from "./components/Gallery";
-import AboutMe from "./components/AboutMe";
-import PrivateLessons from "./components/PrivateLessons";
-import Choreography from "./components/Choreography";
-import Contact from "./components/Contact";
-import styled, { createGlobalStyle } from "styled-components";
-import GroupLessons from "./components/GroupLessons";
-import WeatherWidget from "./components/WeatherWidget";
-import { Address } from "./components/Address";
+import { Layout } from "./layout/Layout";
+import { Route, Routes } from "react-router";
+import { createGlobalStyle } from "styled-components";
+import { TangoReise } from "./components/TangoReise";
+import { Menu } from "./components/Menu";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -130,28 +124,14 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <StyledApp>
-        <Menu />
-        <Presentation />
-        <Gallery />
-        <WeatherWidget />
-        <GroupLessons />
-        <PrivateLessons />
-        <Address />
-        <Choreography />
-        <AboutMe />
-        <Contact />
-      </StyledApp>
+      <Menu />
+      <Routes>
+        <Route path="/" element={<Layout />} />
+        <Route path="/tangoreise" element={<TangoReise />} />
+        <Route path="*" element={<Layout />} />
+      </Routes>
     </>
   );
 }
 
 export default App;
-
-const StyledApp = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
