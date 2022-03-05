@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import styled from "styled-components";
+import { HashLink } from "react-router-hash-link";
 
 export const Menu = () => {
   const [menuVisibility, setMenuVisibility] = useState(false);
@@ -45,22 +46,22 @@ export const Menu = () => {
       >
         <ul>
           <li onClick={clickandhide}>
-            <Link to="/">Home</Link>
+            <HashLink to="/#">Home</HashLink>
           </li>
           <li onClick={clickandhide}>
-            <a href={"/#classes"}>Classes</a>
+            <HashLink to="/#classes">Classes</HashLink>
           </li>
           <li onClick={clickandhide}>
             <Link to="/tangoreise">Tango Reise</Link>
           </li>
           <li onClick={clickandhide}>
-            <a href={"/#choreography"}>Choreography</a>
+            <HashLink to="/#choreography">Choreography</HashLink>
           </li>
           <li onClick={clickandhide}>
-            <a href={"/#aboutme"}>About Me</a>
+            <HashLink to="/#aboutme">About Me</HashLink>
           </li>
           <li onClick={clickandhide}>
-            <a href={"/#contact"}>Contact</a>
+            <HashLink to={"/#contact"}>Contact</HashLink>
           </li>
         </ul>
       </StyledMenu>

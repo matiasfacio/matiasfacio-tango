@@ -127,6 +127,9 @@ function App() {
       <Menu />
       <Routes>
         <Route path="/" element={<Layout />} />
+        <Route path="#classes">
+          <Route path="/#classes" />
+        </Route>
         <Route path="/tangoreise" element={<TangoReise />} />
         <Route path="*" element={<Layout />} />
       </Routes>
