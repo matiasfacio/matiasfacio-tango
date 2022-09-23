@@ -4,28 +4,9 @@ import { Route, Routes } from "react-router";
 import { createGlobalStyle } from "styled-components";
 import { TangoReise } from "./components/TangoReise";
 import { Menu } from "./components/Menu";
+import "./App.css";
 
 export const GlobalStyle = createGlobalStyle`
-
-@font-face {
-  font-family: "Roboto Light";
-  src: url("Roboto-LightItalic.ttf");
-}
-
-@font-face {
-  font-family: "Six Caps";
-  src: url("SixCaps-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Roboto Black";
-  src: url("Roboto-Black.ttf");
-}
-
-@font-face {
-  font-family: "Roboto Medium";
-  src: url("Roboto-Medium.ttf");
-}
 
 :root {
   --main-bg-color: #83af9b;
