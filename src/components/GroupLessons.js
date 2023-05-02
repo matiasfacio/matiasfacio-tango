@@ -1,110 +1,110 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import { Title } from "./Title";
 
 const GroupLessons = () => {
   const sendEmail = () => {
     var link =
-      "mailto:matiaspersonal@gmail.com" +
-      "?cc=" +
-      `&subject=Book a spot for a group class`;
+        "mailto:matiaspersonal@gmail.com" +
+        "?cc=" +
+        `&subject=Book a spot for a group class`;
     window.location.href = link;
   };
   return (
-    <StyledSection>
-      <Title>
-        <h2>Classes in Berlin</h2>
-        <h3>/Kurse in Berlin</h3>
-      </Title>
-      <Classes id="classes">
-        <ClassName>
-          <h4>Tango for Advanced Dancers</h4>
-          <Deutsch>
-            <h4>Tango für Fortgeschrittene</h4>
-          </Deutsch>
-          <Dia>
-            <p>Tuesday </p>
+      <StyledSection>
+        <Title>
+          <h2>Classes in Berlin</h2>
+          <h3>/Kurse in Berlin</h3>
+        </Title>
+        <Classes id="classes">
+          <ClassName>
+            <h4>Tango for Advanced Dancers</h4>
             <Deutsch>
-              <p>Dienstag</p>
+              <h4>Tango für Fortgeschrittene</h4>
             </Deutsch>
-            <Horario>
-              <p>20.30 - 22.00</p>
-            </Horario>
-          </Dia>
-        </ClassName>
+            <Dia>
+              <p>Tuesday </p>
+              <Deutsch>
+                <p>Dienstag</p>
+              </Deutsch>
+              <Horario>
+                <p>20.30 - 22.00</p>
+              </Horario>
+            </Dia>
+          </ClassName>
 
-        <ClassName>
-          <h4>Beginners</h4>
-          <Deutsch>
-            <h4>Anfängers</h4>
-          </Deutsch>
-          <Dia>
-            <p>Wednesday </p>
+          <ClassName>
+            <h4>Beginners</h4>
             <Deutsch>
-              <p>Mittwoch</p>
+              <h4>Anfängers</h4>
             </Deutsch>
-            <Horario>
-              <p>19.30 - 20.30</p>
-            </Horario>
-          </Dia>
-        </ClassName>
-
-        <ClassName>
-          <h4>Advanced Training</h4>
-          <Deutsch>
-            <h4>Training für Fortgeschrittene</h4>
-          </Deutsch>
-          <Dia>
-            <p>Wednesday </p>
+            <Dia>
+              <p>Wednesday </p>
+              <Deutsch>
+                <p>Mittwoch</p>
+              </Deutsch>
+              <Horario>
+                <p>19.30 - 20.30</p>
+              </Horario>
+            </Dia>
+          </ClassName>
+          <ClassName cancel>
+            <h4>Advanced Training</h4>
             <Deutsch>
-              <p>Mittwoch</p>
+              <h4>Training für Fortgeschrittene</h4>
             </Deutsch>
-            <Horario>
-              <p>20.30 - 22.00</p>
-            </Horario>
-          </Dia>
-        </ClassName>
+            <Dia>
+              <p>Wednesday </p>
+              <Deutsch>
+                <p>Mittwoch</p>
+              </Deutsch>
+              <Horario>
+                <p>20.30 - 22.00</p>
+              </Horario>
+            </Dia>
+          </ClassName>
 
-        <ClassTopic>
-          <p>Technique for couples</p>
-          <Deutsch>
-            <p>Technik für Paare</p>
-          </Deutsch>
-          <br />
-          <p>Price: 18€</p>
-          <Deutsch>
-            <p>Preis: 18€</p>
-          </Deutsch>
-        </ClassTopic>
+          <ClassTopic>
+            <p>Technique for couples</p>
+            <Deutsch>
+              <p>Technik für Paare</p>
+            </Deutsch>
+            <br />
+            <p>Price: 18€</p>
+            <Deutsch>
+              <p>Preis: 18€</p>
+            </Deutsch>
+          </ClassTopic>
 
-        <ClassTopic>
-          <p>Intro to Tango and refreshing if you need!</p>
-          <Deutsch>
-            <p>Einführung und wiedereinsteigen!</p>
-          </Deutsch>
-          <br />
-          <p>Price: 15€ / Urban Sport</p>
-          <Deutsch>
-            <p>Preis: 15€/ Urban Sport</p>
-          </Deutsch>
-        </ClassTopic>
+          <ClassTopic>
+            <p>Intro to Tango and refreshing if you need!</p>
+            <Deutsch>
+              <p>Einführung und wiedereinsteigen!</p>
+            </Deutsch>
+            <br />
+            <p>Price: 15€ / Urban Sport</p>
+            <Deutsch>
+              <p>Preis: 15€/ Urban Sport</p>
+            </Deutsch>
+          </ClassTopic>
 
-        <ClassTopic>
-          <p>Technique, Improvisation, Practice</p>
-          <Deutsch>
-            <p>Technik, Impro, Übungen</p>
-          </Deutsch>
-          <br />
-          <p>Price: 18€</p>
-          <Deutsch>
-            <p>Preis: 18€</p>
-          </Deutsch>
-        </ClassTopic>
-      </Classes>
-      <BookAClassButton onClick={sendEmail}>
-        Save your spot now!
-      </BookAClassButton>
-    </StyledSection>
+          <ClassTopic>
+            <p className={"cancelled"}>- not taken place at the moment -</p>
+            <p>Technique, Improvisation, Practice</p>
+            <Deutsch>
+              <p>Technik, Impro, Übungen</p>
+            </Deutsch>
+            <br />
+            <p>Price: 18€</p>
+            <Deutsch>
+              <p>Preis: 18€</p>
+            </Deutsch>
+          </ClassTopic>
+        </Classes>
+        <BookAClassButton onClick={sendEmail}>
+          Save your spot now!
+        </BookAClassButton>
+      </StyledSection>
   );
 };
 
@@ -163,6 +163,9 @@ const Horario = styled.div`
 
 const ClassTopic = styled.div`
   width: fit-content;
+  p.cancelled {
+    color: darkred !important;
+  }
   p {
     color: var(--main-white-color);
     line-height: 1.6rem;
@@ -205,6 +208,7 @@ const ClassName = styled.div`
   h4 {
     color: var(--main-white-color);
     font-family: "Roboto Medium";
+    ${({cancel}) => cancel ? css`text-decoration: line-through`: ''}
   }
   &:nth-of-type(1) {
     grid-row: 1/2;

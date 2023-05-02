@@ -24,14 +24,14 @@ export const Menu = () => {
 
   useEffect(() => {
     const handleScroll = (e) => {
-      if (e.path[1].scrollY > 400) {
+      if (e.scrollY > 400) {
         setMenuVisibilityOnScroll(true);
       } else {
         setMenuVisibilityOnScroll(false);
       }
     };
     window.addEventListener("scroll", (e) => handleScroll(e));
-    return window.removeEventListener("scroll", (e) => handleScroll(e));
+    return ()=> window.removeEventListener("scroll", (e) => handleScroll(e));
   });
 
   return (
