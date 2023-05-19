@@ -33,12 +33,12 @@ export default function ClassesBerlin() {
               </ClassName>
 
               <Dia>
-                <p>Monday / Tuesday / Friday</p>
+                <p>Wednesday</p>
                 <Deutsch>
-                  <p>Montag / Dienstag / Freitag</p>
+                  <p>Mittwoch</p>
                 </Deutsch>
                 <Horario>
-                  <p>11.00 - 13.00</p>
+                  <p>20.30 - 22.00</p>
                 </Horario>
               </Dia>
 
@@ -52,15 +52,15 @@ export default function ClassesBerlin() {
                 </Horario>
               </Dia>
 
-              <Dia>
-                <p>Sunday</p>
-                <Deutsch>
-                  <p>Sonntag</p>
-                </Deutsch>
-                <Horario>
-                  <p>13.00 - 17.00</p>
-                </Horario>
-              </Dia>
+              {/*<Dia>*/}
+              {/*  <p>Sunday</p>*/}
+              {/*  <Deutsch>*/}
+              {/*    <p>Sonntag</p>*/}
+              {/*  </Deutsch>*/}
+              {/*  <Horario>*/}
+              {/*    <p>13.00 - 17.00</p>*/}
+              {/*  </Horario>*/}
+              {/*</Dia>*/}
             </ClassWithoutButton>
           </Class>
         </PrivateLessons>
