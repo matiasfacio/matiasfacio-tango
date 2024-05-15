@@ -7,7 +7,6 @@ import Choreography from "../components/Choreography";
 import Contact from "../components/Contact";
 import styled from "styled-components";
 import GroupLessons from "../components/GroupLessons";
-import WeatherWidget from "../components/WeatherWidget";
 import { Address } from "../components/Address";
 
 export const Layout = () => {
@@ -15,7 +14,6 @@ export const Layout = () => {
     <StyledApp>
       <Presentation />
       <Gallery />
-      <WeatherWidget />
       <GroupLessons />
       <PrivateLessons />
       <Address />
@@ -32,4 +30,5 @@ const StyledApp = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url('./assets/wall-4-light.png');
 `;
