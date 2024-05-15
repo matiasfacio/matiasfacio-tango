@@ -30,5 +30,4 @@ const StyledApp = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('./assets/wall-4-light.png');
 `;

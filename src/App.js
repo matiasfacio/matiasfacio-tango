@@ -36,6 +36,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color: var(--main-bg-color);
     max-width: 1440px;
     margin: 16px auto;
+    background-image: url('./assets/wall-4-light.png');
   }
 
 h1 {
