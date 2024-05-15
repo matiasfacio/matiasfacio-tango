@@ -3,16 +3,6 @@ import styled from "styled-components";
 import { Title } from "./Title";
 
 export default function Choreography() {
-  const sendEmailChoreography = () => {
-    var link =
-      "mailto:matiaspersonal@gmail.com" +
-      "?cc=" +
-      "&subject=" +
-      escape("Choreography");
-    //  + "&body=" + escape(document.getElementById('myText').value)
-    window.location.href = link;
-  };
-
   return (
     <>
       <StyledSection id="choreography">

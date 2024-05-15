@@ -30,9 +30,9 @@ export default function ClassesBerlin() {
                 <Deutsch>
                   <p>Mittwoch</p>
                 </Deutsch>
-                <Horario>
+                <Time>
                   <p>20.30 - 22.00</p>
-                </Horario>
+                </Time>
               </Dia>
 
               <Dia>
@@ -40,20 +40,10 @@ export default function ClassesBerlin() {
                 <Deutsch>
                   <p>Samstag</p>
                 </Deutsch>
-                <Horario>
+                <Time>
                   <p>16.00 - 19.00</p>
-                </Horario>
+                </Time>
               </Dia>
-
-              {/*<Dia>*/}
-              {/*  <p>Sunday</p>*/}
-              {/*  <Deutsch>*/}
-              {/*    <p>Sonntag</p>*/}
-              {/*  </Deutsch>*/}
-              {/*  <Horario>*/}
-              {/*    <p>13.00 - 17.00</p>*/}
-              {/*  </Horario>*/}
-              {/*</Dia>*/}
             </ClassWithoutButton>
           </Class>
         </PrivateLessons>
@@ -125,7 +115,7 @@ const Dia = styled.div`
   }
 `;
 
-const Horario = styled.div`
+const Time = styled.div`
   p {
     font-size: 1.3rem;
     color: var(--main-lightblue-color);
