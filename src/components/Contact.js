@@ -52,14 +52,14 @@ const ContactDetailName = styled.div`
 `;
 
 const ContactDetailEmail = styled.div`
-  color: var(--main-white-color);
+  color: var(--white);
   font-size: 1.5rem;
   font-family: "Roboto Light";
   padding-bottom: 10px;
 `;
 
 const ContactDetailPhone = styled.div`
-  color: var(--main-white-color);
+  color: var(--white);
   font-size: 1.5rem;
   font-family: "Roboto Light";
   padding-bottom: 10px;
@@ -77,6 +77,7 @@ const StyledSection = styled.div`
 
   .socialMediaInfo a {
     color: var(--secondary-color);
+    color: var(--main-buttonText-color);
     font-size: 1.5rem;
     margin-left: 10px;
     font-family: sans-serif;
@@ -98,7 +99,7 @@ const StyledSection = styled.div`
 
   .impressumText p,
   .followMe p {
-    color: var(--main-white-color) !important;
+    color: var(--white) !important;
     font-family: sans-serif;
     margin-top: 50px;
     font-size: 1.3rem;

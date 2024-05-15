@@ -1,6 +1,6 @@
 import React from "react";
 import DisplayMessage from "./DisplayMessage";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const APPID = process.env.REACT_APP_APP_ID;
 
@@ -15,41 +15,29 @@ export default function WeatherWidget() {
         const response = await fetch(
           `https://api.openweathermap.org/data/2.5/weather?q=Berlin,de&APPID=${APPID}&units=metric`
         );
-        if (!response) {
+        if (!response.ok) {
           throw new Error("no internet connection ?");
         }
         const data = await response.json();
         setWeather(data.main.feels_like);
         setIsLoading(false);
-      } catch (error) {}
+      } catch (error) {
+        console.log({error});
+      }
     };
     fetchWeather();
   }, []);
-
-  const styleCelCold = {
-    fontSize: "3em",
-    color: "white",
-    lineHeight: "35px",
-    fontFamily: "Roboto Black",
-  };
-
-  const styleCelHot = {
-    fontSize: "3em",
-    color: "red",
-    lineHeight: "35px",
-    fontFamily: "Roboto Black",
-  };
 
   return (
     <StyledSection>
       <Title>
         {isLoading ? "loading..." : "Temperature in Berlin feels like: "}
       </Title>
-      <TempContainer>
-        <p style={weather < 18 ? styleCelCold : styleCelHot}>{weather}º</p>
+      <TempContainer $styles={weather < 18 ? 'cold' : 'hot' }>
+       {weather}º
       </TempContainer>
       <Message>
-        <DisplayMessage objetoWeather={weather} />
+        <DisplayMessage weather={weather} />
       </Message>
     </StyledSection>
   );
@@ -74,19 +62,24 @@ const Title = styled.div`
   line-height: 1.6;
 `;
 
-const TempContainer = styled.div`
+const TempContainer = styled.p`
   background-color: var(--secondary-color);
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  font-family: sans-serif;
+  font-family: "Roboto Black", sans-serif;
+  font-size: 2.5em;
+  line-height: 35px;
   display: grid;
   place-content: center;
   margin-bottom: 20px;
+  ${({ $styles }) => $styles === 'hot' ? css`
+    color: red;` : css` color: lightblue`
+  }
 `;
 
-const Message = styled.div`
-  color: #8cccfa;
+const Message = styled.p`
+  color: #FFD700;
   background-color: var(--secondary-color);
   font-family: "Roboto Black";
   border-radius: 20px;

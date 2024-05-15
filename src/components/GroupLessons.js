@@ -137,7 +137,7 @@ const BookAClassButton = styled.button`
   align-self: center;
   &:hover {
     border-color: var(--main-buttonText-color);
-    color: var(--main-white-color);
+    color: var(--white);
     transform: translate(-5px, -5px);
   }
 `;

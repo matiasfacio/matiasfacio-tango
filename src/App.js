@@ -9,16 +9,17 @@ import "./App.css";
 export const GlobalStyle = createGlobalStyle`
 
 :root {
-  --main-bg-color: #83af9b;
+  --main-bg-color: #5FA6E2;
   --secondary-bg-color: #688c7c;
   --main-lightblue-color: rgb(109, 108, 108);
   --main-deutsch-color: black;
   --main-black-color: black;
-  --main-white-color: white;
+  --main-white-color: #321414;
+  --white: #fff;
   --main-title-color: #fff;
   --secondary-color: #1a231f;
-  --main-buttonText-color: #8cccfa;
-  --main-title-footer: #83af9b;
+  --main-buttonText-color: #FFD700;
+  --main-title-footer: #FFD700;
   --footer-title: #fff;
   --footer-content: #8cccfa;
 }
@@ -37,7 +38,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 16px auto;
   }
 
-  h1 {
+h1 {
   font-size: 10em;
   color: var(--secondary-color);
 }

@@ -19,7 +19,7 @@ export default function Gallery() {
 
   return (
     <StyledSection id="two" backgroundImage={mainBackground}>
-      <div className="titulo"></div>
+      <div className="gallery-title"></div>
       <Boxes>
         {imagesLinks.map((image, index) => {
           return (
@@ -50,7 +50,7 @@ const StyledSection = styled.div`
     font-family: "Roboto Medium";
   }
 
-  .titulo {
+  .gallery-title {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -72,7 +72,7 @@ const StyledSection = styled.div`
         background-blend-mode: luminosity;
         background-attachment: fixed;
         background-repeat: repeat-x;
-        background-color: var(--secondary-color);
+        background-color: var(--main-bg-color);
         border-radius: 20px;
         border-top: 3px var(--secondary-color) solid;
         border-bottom: 3px var(--secondary-color) solid;
@@ -96,7 +96,7 @@ const StylesBox = styled.div`
     css`
       background-image: url(${backgroundImage});
       background-size: cover;
-      background-color: #83af9b;
+      background-color: var(--main-bg-color);
       background-blend-mode: luminosity;
       background-repeat: no-repeat;
       background-position: right;
