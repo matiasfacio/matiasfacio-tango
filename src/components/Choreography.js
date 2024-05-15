@@ -39,9 +39,9 @@ export default function Choreography() {
             more than interested to hear about your project.
           </p>
         </ChoreographyContent>
-        <PrivateClassButton onClick={sendEmailChoreography}>
+        <RequestChoreographyButton href={"mailto:matiaspersonal@gmail.com?subject=choreography"}>
           Send me an E-mail
-        </PrivateClassButton>
+        </RequestChoreographyButton>
       </StyledSection>
     </>
   );
@@ -51,7 +51,7 @@ const ChoreographyContent = styled.div`
   margin-top: 50px;
 `;
 
-const PrivateClassButton = styled.button`
+const RequestChoreographyButton = styled.a`
   background-color: var(--secondary-color);
   color: var(--main-buttonText-color);
   width: 300px;
@@ -63,10 +63,10 @@ const PrivateClassButton = styled.button`
   margin: 20vh 0;
   font-size: 1.5rem;
   font-weight: bolder;
-
+  text-align: center;;
   &:hover {
     border-color: var(--main-buttonText-color);
-    color: var(--main-white-color);
+    color: var(--white);
     transform: translate(-5px, -5px);
   }
 `;

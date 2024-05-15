@@ -3,13 +3,6 @@ import styled from "styled-components";
 import { Title } from "./Title";
 
 export default function ClassesBerlin() {
-  const sendEmail = () => {
-    var link =
-      "mailto:matiaspersonal@gmail.com" +
-      "?cc=" +
-      `&subject=Private Class / Book a spot for a group class`;
-    window.location.href = link;
-  };
 
   return (
     <>
@@ -64,7 +57,7 @@ export default function ClassesBerlin() {
             </ClassWithoutButton>
           </Class>
         </PrivateLessons>
-        <PrivateClassButton onClick={sendEmail}>Book now!</PrivateClassButton>
+        <PrivateClassButton href="mailto:matiaspersonal@gmail.com?subject=Private%20Class%20/%20Book%20a%20spot%20for%20a%20private%20class">Book now!</PrivateClassButton>
       </Classes>
     </>
   );
@@ -99,7 +92,7 @@ const PrivateLessons = styled.div`
   margin-top: 50px;
 `;
 
-const PrivateClassButton = styled.button`
+const PrivateClassButton = styled.a`
   background-color: var(--secondary-color);
   color: var(--main-buttonText-color);
   width: 300px;
@@ -111,7 +104,8 @@ const PrivateClassButton = styled.button`
   margin: 40px 0;
   font-size: 1.5rem;
   font-weight: bolder;
-
+  font-family: sans-serif;
+  text-align: center;
   &:hover {
     border-color: var(--main-buttonText-color);
     color: var(--white);

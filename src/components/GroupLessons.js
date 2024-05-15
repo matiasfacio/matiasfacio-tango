@@ -3,13 +3,6 @@ import styled, {css} from "styled-components";
 import { Title } from "./Title";
 
 const GroupLessons = () => {
-  const sendEmail = () => {
-    var link =
-        "mailto:matiaspersonal@gmail.com" +
-        "?cc=" +
-        `&subject=Book a spot for a group class`;
-    window.location.href = link;
-  };
   return (
       <StyledSection>
         <Title>
@@ -101,7 +94,7 @@ const GroupLessons = () => {
             </Deutsch>
           </ClassTopic>
         </Classes>
-        <BookAClassButton onClick={sendEmail}>
+       <BookAClassButton href={"mailto:matiaspersonal@gmail.com?subject=Book%20a%20spot%20for%20a%20group%20class"}>
           Save your spot now!
         </BookAClassButton>
       </StyledSection>
@@ -124,7 +117,7 @@ const Deutsch = styled.div`
   }
 `;
 
-const BookAClassButton = styled.button`
+const BookAClassButton = styled.a`
   background-color: var(--secondary-color);
   color: var(--main-buttonText-color);
   width: 300px;
@@ -135,6 +128,7 @@ const BookAClassButton = styled.button`
   font-size: 1.5rem;
   font-weight: bolder;
   align-self: center;
+  text-align: center;
   &:hover {
     border-color: var(--main-buttonText-color);
     color: var(--white);

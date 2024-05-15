@@ -74,6 +74,7 @@ p {
 a {
   color: var(--main-white-color);
   text-decoration: none;
+  font-family: sans-serif;
   &:hover {
     color: var(--main-white-color);
   }
