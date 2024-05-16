@@ -48,6 +48,9 @@ export default function ClassesBerlin() {
           </Class>
         </PrivateLessons>
         <PrivateClassButton href="mailto:matiaspersonal@gmail.com?subject=Private%20Class%20/%20Book%20a%20spot%20for%20a%20private%20class">Book now!</PrivateClassButton>
+        <PrivateClassButton href={"tel:+491774946117"}>
+          (or call me)
+        </PrivateClassButton>
       </Classes>
     </>
   );

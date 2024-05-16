@@ -77,7 +77,7 @@ const GroupLessons = () => {
             <br />
             <p>Price: 15€ / Urban Sport</p>
             <Deutsch>
-              <p>Preis: 15€/ Urban Sport</p>
+              <p>Preis: 15€ / Urban Sport</p>
             </Deutsch>
           </ClassTopic>
 
@@ -96,6 +96,10 @@ const GroupLessons = () => {
         </Classes>
        <BookAClassButton href={"mailto:matiaspersonal@gmail.com?subject=Book%20a%20spot%20for%20a%20group%20class"}>
           Save your spot now!
+      </BookAClassButton>
+      <br />
+      <BookAClassButton href={"tel:+491774946117"}>
+          (or call me)
         </BookAClassButton>
       </StyledSection>
   );
@@ -257,4 +261,5 @@ const StyledSection = styled.section`
   display: flex;
   justify-content: center;
   flex-direction: column;
+  gap: 24px
 `;
