@@ -36,7 +36,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color: var(--main-bg-color);
     max-width: 1440px;
     margin: 16px auto;
-    background-image: url('./assets/wall-4-light.png');
+    //background-image: url('./assets/wall-4-light.png');
   }
 
 h1 {
@@ -46,7 +46,7 @@ h1 {
 
 h2 {
   font-size: clamp(2rem, 4vw, 4em);
-  color: var(--main-white-color);
+  color: var(--white);
   margin: 0;
   padding: 0;
   font-family: "Roboto Black";
@@ -81,7 +81,7 @@ a {
 }
 
 .deutsch {
-  color: var(--secondary-color) !important;
+  color: var(--main-buttonText-color) !important;
 
 }
 

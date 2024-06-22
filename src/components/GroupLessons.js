@@ -7,7 +7,7 @@ const GroupLessons = () => {
       <StyledSection>
         <Title>
           <h2>Classes in Berlin</h2>
-          <h3>/Kurse in Berlin</h3>
+          <h3 className="deutsch">/Kurse in Berlin</h3>
         </Title>
         <Classes id="classes">
           <ClassName>
