@@ -10,14 +10,23 @@ export const Workshops = () => {
         <h3 className="deutsch">/Workshops</h3>
       </Title>
       <StyledWorkshops>
-        <Dia>Wednesday 15.06.2024</Dia>
-        <Horario>20:30 - 22:00</Horario>
+        <Dia>
+          Wednesday 11.06.2024
+          <Deutsch>
+            <p>Mittwoch</p>
+          </Deutsch>
+          <Horario>20:30 - 22:00 Uhr</Horario>
+        </Dia>
+
         <ClassName><h4>Leader's Technique Seminar</h4></ClassName>
-        <Deutsch>
-          <h4>Wie führt man Sacadas Entradas aus und was ist der Unterschied zwischen ihnen?</h4>
-        </Deutsch>
         <ClassTopic>
-          <p>How to perform sacadas entradas and what is the difference between them?</p>
+          <h4>How to perform sacadas - entradas and what is the difference between them?</h4>
+          <Deutsch>
+            <h4>Wie führt man Sacadas - Entradas aus und was ist der Unterschied zwischen ihnen?</h4>
+          </Deutsch>
+        </ClassTopic>
+        <ClassTopic>
+          <p>Price 20€</p>
         </ClassTopic>
       </StyledWorkshops>
     </StyledSection>
@@ -25,12 +34,12 @@ export const Workshops = () => {
 }
 
 const ClassTopic = styled.div`
-  width: fit-content;
   p {
     color: var(--main-white-color);
     line-height: 1.6rem;
     font-size: 1.3rem;
     font-family: sans-serif;
+    margin-bottom: 8px;
   }
 `
 
@@ -72,10 +81,10 @@ const StyledWorkshops = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   margin-top: 50px;
-  gap: 16px;
+  gap: 20px;
 `;
 
-const Dia = styled.p`
+const Dia = styled.div`
     font-family: sans-serif;
     font-weight: bolder;
     font-size: clamp(1.5rem, 1.5vw, 2.5em);
