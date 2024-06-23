@@ -26,7 +26,8 @@ export const Workshops = () => {
           </Deutsch>
         </ClassTopic>
         <ClassTopic>
-          <p>Price 20€</p>
+          <p>Price: 20€</p>
+          <p>Where: Immanuelkirchstrasse 6, 10405 Berlin</p>
         </ClassTopic>
       </StyledWorkshops>
     </StyledSection>

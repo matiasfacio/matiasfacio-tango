@@ -3,7 +3,6 @@ import { Layout } from "./layout/Layout";
 import { Route, Routes } from "react-router";
 import { createGlobalStyle } from "styled-components";
 import { TangoReise } from "./components/TangoReise";
-import { Menu } from "./components/Menu";
 import "./App.css";
 
 export const GlobalStyle = createGlobalStyle`
@@ -109,7 +108,6 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Menu />
       <Routes>
         <Route path="/" element={<Layout />} />
         <Route path="#classes">
