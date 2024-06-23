@@ -1,6 +1,6 @@
 import React from "react";
 import { Title } from "./Title";
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 
 export const Workshops = () => {
   return (
