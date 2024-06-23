@@ -6,7 +6,7 @@ export default function ClassesBerlin() {
 
   return (
     <>
-      <Classes>
+      <ClassesSection>
         <Title>
           <h2>Private lessons</h2>
           <h3 className="deutsch">/Privatunterricht</h3>
@@ -51,7 +51,7 @@ export default function ClassesBerlin() {
         <PrivateClassButton href={"tel:+491774946117"}>
           (or call me)
         </PrivateClassButton>
-      </Classes>
+      </ClassesSection>
     </>
   );
 }
@@ -75,7 +75,6 @@ const Deutsch = styled.div`
 const Class = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0 2em;
   transition-duration: 1s;
 `;
 
@@ -149,11 +148,12 @@ const ClassName = styled.div`
   }
 `;
 
-const Classes = styled.div`
+const ClassesSection = styled.section`
   margin: 10vh auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   background-image: url('./assets/wall-4-light.png');
+  padding: 2rem;
 `;

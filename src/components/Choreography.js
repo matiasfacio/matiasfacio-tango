@@ -67,7 +67,7 @@ const StyledSection = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 2em;
+  padding: 2rem;
   max-width: 1200px;
   background-image: url('./assets/wall-4-light.png');
   p {
