@@ -69,6 +69,7 @@ const StyledSection = styled.div`
   align-items: center;
   padding: 0 2em;
   max-width: 1200px;
+  background-image: url('./assets/wall-4-light.png');
   p {
     color: var(--main-white-color);
     line-height: 1.6rem;

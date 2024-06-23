@@ -63,4 +63,5 @@ const StyledSection = styled.div`
   justify-content: center;
   align-items: center;
   cursor: default;
+
 `;

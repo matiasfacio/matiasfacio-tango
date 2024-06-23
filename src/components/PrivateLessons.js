@@ -155,4 +155,5 @@ const Classes = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  background-image: url('./assets/wall-4-light.png');
 `;

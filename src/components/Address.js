@@ -21,8 +21,9 @@ const StyledAddress = styled.section`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin: 20vh 2em;
-
+  margin: 20vh 0;
+  background-image: url('./assets/wall-4-light.png');
+  padding: 2rem;
   p {
     color: var(--main-white-color);
     font-size: 1.3rem;

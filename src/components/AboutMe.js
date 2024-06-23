@@ -137,7 +137,7 @@ const StyledSection = styled.div`
   align-items: center;
   max-width: 1200px;
   margin: 20vh 2em;
-
+  background-image: url('./assets/wall-4-light.png');
   h3 {
     font-family: "Roboto Black";
   }

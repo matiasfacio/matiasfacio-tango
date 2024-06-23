@@ -257,9 +257,11 @@ const Classes = styled.div`
 `;
 
 const StyledSection = styled.section`
-  margin: 20vh 2em;
+  margin: 20vh 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 24px
+  gap: 24px;
+  padding: 2rem;
+  background-image: url('./assets/wall-4-light.png');
 `;

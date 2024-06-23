@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
   --main-black-color: black;
   --main-white-color: #321414;
   --white: #fff;
-  --main-title-color: #fff;
+  --main-title-color: #5FA6E2;
   --secondary-color: #1a231f;
   --main-buttonText-color: #FFD700;
   --main-title-footer: #FFD700;
@@ -33,7 +33,8 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     overflow-x: hidden;
-    background-color: var(--main-bg-color);
+    background-color: var(--white);
+    /* background-color: var(--main-bg-color); */
     max-width: 1440px;
     margin: 16px auto;
     //background-image: url('./assets/wall-4-light.png');
@@ -46,7 +47,7 @@ h1 {
 
 h2 {
   font-size: clamp(2rem, 4vw, 4em);
-  color: var(--white);
+  color: var(--main-bg-color);
   margin: 0;
   padding: 0;
   font-family: "Roboto Black";
