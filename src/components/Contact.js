@@ -66,7 +66,7 @@ const ContactDetailPhone = styled.div`
 `;
 
 const StyledSection = styled.div`
-  background-color: var(--secondary-color);
+  background-color: var(--main-black-color);
   width: 100vw;
   min-height: 100vh;
   display: flex;

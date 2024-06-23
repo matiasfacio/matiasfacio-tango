@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
   --secondary-bg-color: #688c7c;
   --main-lightblue-color: rgb(109, 108, 108);
   --main-deutsch-color: black;
-  --main-black-color: black;
+  --main-black-color: #494949;
   --main-white-color: #321414;
   --white: #fff;
   --main-title-color: #5FA6E2;

@@ -122,7 +122,7 @@ const Deutsch = styled.div`
 `;
 
 const BookAClassButton = styled.a`
-  background-color: var(--secondary-color);
+  background-color: var(--main-black-color);
   color: var(--main-buttonText-color);
   width: 300px;
   border-radius: 10px;
