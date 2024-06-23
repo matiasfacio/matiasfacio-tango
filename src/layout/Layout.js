@@ -8,12 +8,14 @@ import Contact from "../components/Contact";
 import styled from "styled-components";
 import GroupLessons from "../components/GroupLessons";
 import { Address } from "../components/Address";
+import { Workshops } from "../components/Workshops";
 
 export const Layout = () => {
   return (
     <StyledApp>
       <Presentation />
       <Gallery />
+      <Workshops/>
       <GroupLessons />
       <PrivateLessons />
       <Address />

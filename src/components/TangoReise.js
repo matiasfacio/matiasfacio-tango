@@ -51,7 +51,7 @@ export const TangoReise = () => {
 };
 
 const TangoReiseContainer = styled.div`
-  margin: 20vh auto;
+  margin: 10vh auto;
   width: 100%;
   display: flex;
   justify-content: center;

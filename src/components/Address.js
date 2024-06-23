@@ -21,7 +21,7 @@ const StyledAddress = styled.section`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin: 20vh 0;
+  margin: 10vh 0;
   background-image: url('./assets/wall-4-light.png');
   padding: 2rem;
   p {

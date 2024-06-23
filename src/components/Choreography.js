@@ -50,7 +50,7 @@ const RequestChoreographyButton = styled.a`
   border-width: 0px;
   border-color: var(--main-buttonText-color);
   padding: 10px 20px;
-  margin: 20vh 0;
+  margin: 10vh 0;
   font-size: 1.5rem;
   font-weight: bolder;
   text-align: center;;

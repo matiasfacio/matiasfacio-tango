@@ -257,7 +257,7 @@ const Classes = styled.div`
 `;
 
 const StyledSection = styled.section`
-  margin: 20vh 0;
+  margin: 10vh 0;
   display: flex;
   justify-content: center;
   flex-direction: column;

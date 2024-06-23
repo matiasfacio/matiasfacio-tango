@@ -150,7 +150,7 @@ const ClassName = styled.div`
 `;
 
 const Classes = styled.div`
-  margin: 20vh auto;
+  margin: 10vh auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
