@@ -70,7 +70,7 @@ const GroupLessons = () => {
           </ClassTopic>
 
           <ClassTopic>
-            <p>Intro to Tango and refreshing if you need!</p>
+            <p>Introduction to Tango or Refresh if you need!</p>
             <Deutsch>
               <p>Einführung und wiedereinsteigen!</p>
             </Deutsch>
@@ -82,7 +82,7 @@ const GroupLessons = () => {
           </ClassTopic>
 
           <ClassTopic>
-            <p className={"cancelled"}>- not taken place at the moment -</p>
+            <p className={"cancelled"}>- not taking place at the moment -</p>
             <p>Technique, Improvisation, Practice</p>
             <Deutsch>
               <p>Technik, Impro, Übungen</p>

@@ -7,7 +7,7 @@ export default function Choreography() {
     <>
       <StyledSection id="choreography">
         <Title>
-          <h2>Choreography Making</h2>
+          <h2>Creating choreography</h2>
           <h3 className="deutsch">/Choregrapher</h3>
         </Title>
         <ChoreographyContent>

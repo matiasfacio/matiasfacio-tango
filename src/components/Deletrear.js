@@ -18,7 +18,7 @@ const Deletrear = () => {
   };
 
   useEffect(() => {
-    const chain = "Dancer & Teacher for Argentine Tango";
+    const chain = "Dancer & Teacher of Argentine Tango";
     const speed = 50;
     const list = chain.split("");
     const copiedList = [];
