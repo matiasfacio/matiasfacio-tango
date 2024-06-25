@@ -68,11 +68,13 @@ const RequestChoreographyButton = styled.a`
   margin: 10vh 0;
   font-size: 1.5rem;
   font-weight: bolder;
-  text-align: center;;
+  text-align: center;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  transition: all 100ms ease-in-out;
   &:hover {
     border-color: var(--main-buttonText-color);
     color: var(--white);
-    transform: translate(-5px, -5px);
+    transform: translate(-2px, -2px);
   }
 `;
 
