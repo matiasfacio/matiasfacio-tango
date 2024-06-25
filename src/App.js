@@ -11,8 +11,8 @@ export const GlobalStyle = createGlobalStyle`
   --main-bg-color: #5FA6E2;
   --secondary-bg-color: #688c7c;
   --main-lightblue-color: rgb(109, 108, 108);
-  --main-deutsch-color: black;
-  --main-black-color: #292929;
+  --main-deutsch-color: #494949;
+  --main-black-color: #494949;
   --main-white-color: #321414;
   --white: #fff;
   --main-title-color: #5FA6E2;
