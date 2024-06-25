@@ -28,8 +28,7 @@ export default function AboutMe() {
               thinking this dance.
             </p>
             <p className="deutsch-black">
-              /Ich habe in 1995 mit Tango begonnen. Seitdem, habe ich nie einmal
-              gestopped, dieses Tanz zu analysieren und tanzen.
+              /Ich habe 1995 mit dem Tango angefangen und seitdem nicht aufgehört zu tanzen und zu analysieren
             </p>
           </Card>
           <Card>
@@ -42,9 +41,7 @@ export default function AboutMe() {
               approach to studing and transmitting it.
             </p>
             <p className="deutsch-black">
-              /Parallel zur Tango, habe ich Erfahrung mit Zeitgenossentanzen und
-              Feldenkrais. Beide Technik und verchiedene Styles haben geholfen,
-              mein Tango weiter zu entwickeln.
+              /Parallel zum Tango habe ich mich mit zeitgenössischem Tanz und Feldenkrais beschäftigt. Beide Techniken haben geholfen, meinen Tango weiterzuentwickeln und ihn zu vermitteln.
             </p>
           </Card>
           <Card>
@@ -58,10 +55,7 @@ export default function AboutMe() {
               States, Argentina and Uruguay.
             </p>
             <p className="deutsch-black">
-              /Als Gastlehrer, habe ich Weltweit unterrichtet. Ich bin oft in
-              Japan, Hong Kong und Kanada gewessen. Ich habe auch in die
-              wichtesten Tango Kapitals in Europa unterrichtet. So wohl als auch
-              in Russia, Der Türkei, Israel, USA, Uruguay und in Argentinien.
+              /Als Gastlehrer, habe ich Weltweit unterrichtet. Ich bin oft in Japan, Hong Kong und Kanada gewesen. Außerdem habe ich in den bedeutendsten Hauptstädten des Tangos in Europa Russland, der Türkei, Israel, den USA, Uruguay und in Argentinien unterrichtet.
             </p>
           </Card>
           <Card id="ultima">
@@ -75,10 +69,7 @@ export default function AboutMe() {
               Come to visit!
             </p>
             <p className="deutsch-black">
-              /Seit 2008, wohne in Berlin, Deutschland. In Berlin habe ich eine
-              kleine Tanzstudio mit Claudia Rogowski gegründet: Tango Libre. Ich
-              unterrichte Grundlage und Fortgeschritte Technik für Tango für
-              Social Dance (Milongas). Komm!
+              /Seit 2008, wohne in Deutschland in Berlin. Hier habe ich ein kleines Tanzstudio mit Claudia Rogowski gegründet: Tango Libre. Ich unterrichte Grundlagen und fortgeschrittene Techniken für Tango im Salon. (Milongas). Besucht mich!
             </p>
           </Card>
         </CardsContainer>
@@ -144,8 +135,8 @@ const StyledSection = styled.div`
   }
   p {
     color: var(--main-white-color);
-    font-size: 1.3rem;
-    font-family: "Roboto Light", sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.5rem) !important;
+    font-family: sans-serif;
     padding-bottom: 15px;
   }
 `;

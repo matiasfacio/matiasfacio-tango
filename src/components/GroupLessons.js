@@ -72,7 +72,7 @@ const GroupLessons = () => {
           <ClassTopic>
             <p>Introduction to Tango or Refresh if you need!</p>
             <Deutsch>
-              <p>Einführung und wiedereinsteigen!</p>
+              <p>Grundlagen und Wiedereinsteiger</p>
             </Deutsch>
             <br />
             <p>Price: 15€ / Urban Sport</p>

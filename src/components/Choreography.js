@@ -28,6 +28,15 @@ export default function Choreography() {
             <span>to schedule a meeting or give me a call</span>, I would be
             more than interested to hear about your project.
           </p>
+          <Deutsch>
+          <p>/Meine Idee zur Choreografie besteht zunächst darin, auf die Bedürfnisse des Regisseurs und der Tänzer zu hören – nicht nur auf die ausgesprochenen, sondern auch auf die
+              unausgesprochenen, die stillen, die, die der Geist und der Körper zeigen wollen.
+              <br /><br />
+              Die Erstellung von Choreografien für Tänzer, Theaterstücke oder Fernsehsendungen ist mein Hauptarbeitsbereich, aber ich kreiere auch Choreografien für Firmen- und private Veranstaltungen.
+              <br /><br />
+              Wenn Sie mehr darüber erfahren möchten, schreiben Sie mir bitte eine E-Mail, um einen Termin zu vereinbaren, oder rufen Sie mich an. Ich würde mich sehr freuen, von Ihrem Projekt zu hören.
+            </p>
+          </Deutsch>
         </ChoreographyContent>
         <RequestChoreographyButton href={"mailto:matiaspersonal@gmail.com?subject=choreography"}>
           Send me an E-mail
@@ -39,6 +48,12 @@ export default function Choreography() {
 
 const ChoreographyContent = styled.div`
   margin-top: 50px;
+  p {
+    margin-bottom: 24px;
+    color: var(--main-white-color);
+    font-size: 1.3rem;
+    /* font-family: "Roboto Light", sans-serif !important; */
+  }
 `;
 
 const RequestChoreographyButton = styled.a`
@@ -73,10 +88,24 @@ const StyledSection = styled.div`
   p {
     color: var(--main-white-color);
     line-height: 1.6rem;
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 1.5vw, 1.5rem) !important;
     font-family: sans-serif;
   }
   span {
     color: var(--main-deutsch-color);
+  }
+`;
+
+const Deutsch = styled.div`
+  h4,
+  h3 {
+    color: var(--secondary-color) !important;
+  }
+  h4 {
+    font-size: clamp(1.1rem, 2vw, 1.5rem) !important;
+  }
+  p {
+    font-size: clamp(1rem, 1.5vw, 1.5rem) !important;
+    color: var(--secondary-color) !important;
   }
 `;

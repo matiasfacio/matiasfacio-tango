@@ -22,7 +22,7 @@ export const Workshops = () => {
         <ClassTopic>
           <h4>How to perform sacadas and entradas and what is the difference between them?</h4>
           <Deutsch>
-            <h4>Wie tanzt man Sacadas und Entradas</h4>
+            <h4>Wie tanzt man Sacadas und Entradas, und was ist der Unterschied?</h4>
           </Deutsch>
         </ClassTopic>
         <ClassTopic>
