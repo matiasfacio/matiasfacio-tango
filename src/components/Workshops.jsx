@@ -36,7 +36,7 @@ export const Workshops = () => {
 
 const ClassTopic = styled.div`
   p {
-    color: var(--main-white-color);
+    color: var(--white);
     line-height: 1.6rem;
     font-size: 1.3rem;
     font-family: sans-serif;
@@ -44,9 +44,10 @@ const ClassTopic = styled.div`
   }
 `
 
-const Deutsch = styled.div`
+export const Deutsch = styled.div`
   h4,
-  h3 {
+  h3,
+  p {
     color: var(--secondary-color) !important;
   }
   h4 {
@@ -54,14 +55,13 @@ const Deutsch = styled.div`
   }
   p {
     font-size: clamp(1rem, 1.5vw, 1.5rem) !important;
-    color: var(--secondary-color) !important;
   }
 `;
 
 const ClassName = styled.div`
   padding-right: 30px;
   h4 {
-    color: var(--main-white-color);
+    color: var(--white);
     font-family: "Roboto Medium";
   }
 `
@@ -74,7 +74,6 @@ const StyledSection = styled.section`
   flex-direction: column;
   gap: 24px;
   padding: 2rem;
-  background-image: url('./assets/wall-4-light.png');
 `;
 
 const StyledWorkshops = styled.div`
@@ -91,10 +90,10 @@ const Dia = styled.div`
     font-size: clamp(1.5rem, 1.5vw, 2.5em);
     padding-left: 0px;
     padding-top: 10px;
-    color: var(--main-white-color);
+    color: var(--white);
 `;
 
 const Horario = styled.p`
     font-size: 1.3rem;
-    color: var(--main-lightblue-color);
+    color: var(--gray-600);
 `;

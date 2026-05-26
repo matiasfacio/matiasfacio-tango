@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Title } from "./Title";
+import {Deutsch} from "./Workshops";
+import {StyledButton} from "./GroupLessons";
 
 export default function Choreography() {
   return (
@@ -8,7 +10,7 @@ export default function Choreography() {
       <StyledSection id="choreography">
         <Title>
           <h2>Creating choreography</h2>
-          <h3 className="deutsch">/Choregrapher</h3>
+          <h3 className="deutsch">/Choreographer</h3>
         </Title>
         <ChoreographyContent>
           <p>
@@ -18,14 +20,12 @@ export default function Choreography() {
             to be showed.
             <br />
             <br />
-            <span>
               Choreography making for dancers, theather play or tv shows
-            </span>
             is my main field of work, but I do choreographies also for corporate
             and private events. <br />
             <br />
             If you wish to know more about it, please email me
-            <span>to schedule a meeting or give me a call</span>, I would be
+           to schedule a meeting or give me a call, I would be
             more than interested to hear about your project.
           </p>
           <Deutsch>
@@ -38,45 +38,18 @@ export default function Choreography() {
             </p>
           </Deutsch>
         </ChoreographyContent>
-        <RequestChoreographyButton href={"mailto:matiaspersonal@gmail.com?subject=choreography"}>
+        <StyledButton href={"mailto:matiaspersonal@gmail.com?subject=choreography"}>
           Send me an E-mail
-        </RequestChoreographyButton>
+        </StyledButton>
       </StyledSection>
     </>
   );
 }
 
 const ChoreographyContent = styled.div`
-  margin-top: 50px;
-  p {
-    margin-bottom: 24px;
-    color: var(--main-white-color);
-    font-size: 1.3rem;
-    /* font-family: "Roboto Light", sans-serif !important; */
-  }
+  margin-block: 50px;
 `;
 
-const RequestChoreographyButton = styled.a`
-  background-color: var(--main-black-color);
-  color: var(--main-buttonText-color);
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-  border-width: 0px;
-  border-color: var(--main-buttonText-color);
-  padding: 10px 20px;
-  margin: 10vh 0;
-  font-size: 1.5rem;
-  font-weight: bolder;
-  text-align: center;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-  transition: all 100ms ease-in-out;
-  &:hover {
-    border-color: var(--main-buttonText-color);
-    color: var(--white);
-    transform: translate(-2px, -2px);
-  }
-`;
 
 const StyledSection = styled.div`
   grid-area: choreography;
@@ -86,28 +59,12 @@ const StyledSection = styled.div`
   align-items: center;
   padding: 2rem;
   max-width: 1200px;
-  background-image: url('./assets/wall-4-light.png');
   p {
-    color: var(--main-white-color);
-    line-height: 1.6rem;
+    color: var(--white);
     font-size: clamp(1rem, 1.5vw, 1.5rem) !important;
     font-family: sans-serif;
   }
   span {
     color: var(--main-deutsch-color);
-  }
-`;
-
-const Deutsch = styled.div`
-  h4,
-  h3 {
-    color: var(--secondary-color) !important;
-  }
-  h4 {
-    font-size: clamp(1.1rem, 2vw, 1.5rem) !important;
-  }
-  p {
-    font-size: clamp(1rem, 1.5vw, 1.5rem) !important;
-    color: var(--secondary-color) !important;
   }
 `;

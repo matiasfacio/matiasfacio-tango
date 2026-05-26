@@ -49,8 +49,8 @@ const Title = styled.div`
   font-weight: bolder;
   background: linear-gradient(
     to right,
-    var(--main-title-color),
-    var(--main-title-color)
+    var(--white),
+    var(--white)
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -63,5 +63,4 @@ const StyledSection = styled.div`
   justify-content: center;
   align-items: center;
   cursor: default;
-
 `;

@@ -8,19 +8,16 @@ import "./App.css";
 export const GlobalStyle = createGlobalStyle`
 
 :root {
-  --main-bg-color: #5FA6E2;
-  --secondary-bg-color: #688c7c;
-  --main-lightblue-color: rgb(109, 108, 108);
-  --main-deutsch-color: #494949;
-  --main-black-color: #494949;
-  --main-white-color: #321414;
-  --white: #fff;
-  --main-title-color: #5FA6E2;
-  --secondary-color: #1a231f;
-  --main-buttonText-color: #FFD700;
-  --main-title-footer: #FFD700;
-  --footer-title: #fff;
-  --footer-content: #8cccfa;
+   --body-bg-color: #1E201F;
+    --accent-color: #5A7268;
+  --accent-color-500:#C2D4CE;
+  --gray-600: rgb(109, 108, 108);
+  --main-deutsch-color: #C2D4CE;
+  --black: #1E201F;
+  --black-500: #2E3230;  
+  --white: #F5F8F7;
+  --secondary-color: #87A99C;
+  --text: #F5F8F7;
 }
 
   * {
@@ -32,21 +29,20 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     overflow-x: hidden;
-    background-color: var(--white);
-    /* background-color: var(--main-bg-color); */
+    background-color: var(--body-bg-color);
     max-width: 1440px;
     margin: 16px auto;
-    //background-image: url('./assets/wall-4-light.png');
+    color: var(--text);
   }
 
 h1 {
   font-size: 10em;
-  color: var(--secondary-color);
+  color: var(--accent-color);
 }
 
 h2 {
   font-size: clamp(2rem, 4vw, 4em);
-  color: var(--main-bg-color);
+  color: var(--white);
   margin: 0;
   padding: 0;
   font-family: "Roboto Black";
@@ -54,40 +50,34 @@ h2 {
 
 h3 {
   font-size: clamp(1.1rem, 2vw, 3em);
-  color: var(--main-white-color);
+  color: var(--accent-color);
   margin: 0;
   font-family: "Roboto Light";
 }
 
 h4 {
   font-size: 2em;
-  color: var(--main-white-color);
+  color: var(--accent-color);
   margin: 0;
   font-family: "Roboto Light";
 }
 
 p {
-  line-height: 1.6rem;
+  line-height: 1.4;
   cursor: default;
 }
 
 a {
-  color: var(--main-white-color);
+  color: var(--text);
   text-decoration: none;
   font-family: sans-serif;
   &:hover {
-    color: var(--main-white-color);
+    color: var(--text);
   }
 }
 
 .deutsch {
-  color: var(--main-buttonText-color) !important;
-
-}
-
-.deutsch-black {
-  font-size: 1.3rem;
-  color: var(--secondary-color) !important;
+  color: var(--accent-color) !important;
 }
 
 /* Menu principal */
@@ -98,8 +88,8 @@ a {
 }
 
 a:active {
-  color: var(--secondary-color);
-  background-color: var(--main-white-color);
+  color: var(--text);
+  background-color: var(--white);
 }
 
 `;

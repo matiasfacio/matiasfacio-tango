@@ -27,7 +27,7 @@ export default function AboutMe() {
               since then I haven't stop not even for one day dancing and
               thinking this dance.
             </p>
-            <p className="deutsch-black">
+            <p className="deutsch">
               /Ich habe 1995 mit dem Tango angefangen und seitdem nicht aufgehört zu tanzen und zu analysieren
             </p>
           </Card>
@@ -40,7 +40,7 @@ export default function AboutMe() {
               All these styles and techniques have enriched my Tango and my
               approach to studing and transmitting it.
             </p>
-            <p className="deutsch-black">
+            <p className="deutsch">
               /Parallel zum Tango habe ich mich mit zeitgenössischem Tanz und Feldenkrais beschäftigt. Beide Techniken haben geholfen, meinen Tango weiterzuentwickeln und ihn zu vermitteln.
             </p>
           </Card>
@@ -54,7 +54,7 @@ export default function AboutMe() {
               tango Capitals of Europe, Russia, Turkey, Israel, the United
               States, Argentina and Uruguay.
             </p>
-            <p className="deutsch-black">
+            <p className="deutsch">
               /Als Gastlehrer, habe ich Weltweit unterrichtet. Ich bin oft in Japan, Hong Kong und Kanada gewesen. Außerdem habe ich in den bedeutendsten Hauptstädten des Tangos in Europa Russland, der Türkei, Israel, den USA, Uruguay und in Argentinien unterrichtet.
             </p>
           </Card>
@@ -68,7 +68,7 @@ export default function AboutMe() {
               teach basic and advanced concepts of Tango for Social dancing.
               Come to visit!
             </p>
-            <p className="deutsch-black">
+            <p className="deutsch">
               /Seit 2008, wohne in Deutschland in Berlin. Hier habe ich ein kleines Tanzstudio mit Claudia Rogowski gegründet: Tango Libre. Ich unterrichte Grundlagen und fortgeschrittene Techniken für Tango im Salon. (Milongas). Besucht mich!
             </p>
           </Card>
@@ -82,7 +82,7 @@ export default function AboutMe() {
 const CircledImageContainer = styled.div`
   height: 200px;
   width: 200px;
-  background-color: var(--main-bg-color);
+  background-color: var(--accent-color-500);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,12 +129,11 @@ const StyledSection = styled.div`
   max-width: 1200px;
   margin: 10vh 0;
   padding: 2rem;
-  background-image: url('./assets/wall-4-light.png');
   h3 {
     font-family: "Roboto Black";
   }
   p {
-    color: var(--main-white-color);
+    color: var(--white);
     font-size: clamp(1rem, 1.5vw, 1.5rem) !important;
     font-family: sans-serif;
     padding-bottom: 15px;
@@ -156,7 +155,7 @@ const Card = styled.div`
   padding: 10px;
   position: relative;
   border-top: none;
-  border-bottom: 2px var(--secondary-bg-color) solid;
+  border-bottom: 2px var(--secondary-color) solid;
   border-left: none;
   display: flex;
   flex-shrink: 1;

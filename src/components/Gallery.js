@@ -44,7 +44,7 @@ const StyledSection = styled.div`
   h2 {
     font-size: 5rem;
     letter-spacing: -4px;
-    color: var(--main-white-color);
+    color: var(--white);
     background-color: rgba(0, 0, 0, 0.6);
     padding: 20px 40px;
     font-family: "Roboto Medium";
@@ -72,7 +72,7 @@ const StyledSection = styled.div`
         background-blend-mode: luminosity;
         background-attachment: fixed;
         background-repeat: repeat-x;
-        background-color: var(--main-bg-color);
+        background-color: var(--accent-color-500);
         border-radius: 20px;
         border-top: 3px var(--secondary-color) solid;
         border-bottom: 3px var(--secondary-color) solid;
@@ -89,20 +89,20 @@ const StyledSection = styled.div`
 const StylesBox = styled.div`
   width: 8vw;
   height: 8vw;
-  border: 3px var(--main-deutsch-color) solid;
+  border: 3px var(--accent-color) solid;
   background-repeat: no-repeat;
   margin-right: 20px;
   ${({ backgroundImage }) =>
     css`
       background-image: url(${backgroundImage});
       background-size: cover;
-      background-color: var(--main-bg-color);
+      background-color: var(--accent-color-500);
       background-blend-mode: luminosity;
       background-repeat: no-repeat;
       background-position: right;
     `}
   border-radius: 20px;
-  border: 3px var(--main-deutsch-color) solid;
+  border: 3px var(--accent-color) solid;
   transition: all 250ms ease-in-out;
   &:hover {
     transform: translateY(-10px);

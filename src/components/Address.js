@@ -22,10 +22,9 @@ const StyledAddress = styled.section`
   justify-content: space-around;
   align-items: center;
   margin: 10vh 0;
-  background-image: url('./assets/wall-4-light.png');
   padding: 2rem;
   p {
-    color: var(--main-white-color);
+    color: var(--white);
     font-size: 1.3rem;
     line-height: 1.8;
     font-family: sans-serif;
@@ -36,7 +35,7 @@ const StyledAddress = styled.section`
       content: "";
       height: 10px;
       width: 10px;
-      background-color: var(--main-white-color);
+      background-color: var(--white);
       transform: translate(-20px, 10px);
     }
   }

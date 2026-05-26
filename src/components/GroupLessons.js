@@ -1,6 +1,7 @@
 import React from "react";
 import styled, {css} from "styled-components";
 import { Title } from "./Title";
+import {Deutsch} from "./Workshops";
 
 const GroupLessons = () => {
   return (
@@ -25,38 +26,6 @@ const GroupLessons = () => {
               </Horario>
             </Dia>
           </ClassName>
-
-          <ClassName>
-            <h4>Beginners</h4>
-            <Deutsch>
-              <h4>Anfängers</h4>
-            </Deutsch>
-            <Dia>
-              <p>Wednesday </p>
-              <Deutsch>
-                <p>Mittwoch</p>
-              </Deutsch>
-              <Horario>
-                <p>19.30 - 20.30</p>
-              </Horario>
-            </Dia>
-          </ClassName>
-          <ClassName cancel>
-            <h4>Advanced Training</h4>
-            <Deutsch>
-              <h4>Training für Fortgeschrittene</h4>
-            </Deutsch>
-            <Dia>
-              <p>Wednesday </p>
-              <Deutsch>
-                <p>Mittwoch</p>
-              </Deutsch>
-              <Horario>
-                <p>20.30 - 22.00</p>
-              </Horario>
-            </Dia>
-          </ClassName>
-
           <ClassTopic>
             <p>Technique for couples</p>
             <Deutsch>
@@ -68,75 +37,35 @@ const GroupLessons = () => {
               <p>Preis: 18€</p>
             </Deutsch>
           </ClassTopic>
-
-          <ClassTopic>
-            <p>Introduction to Tango or Refresh if you need!</p>
-            <Deutsch>
-              <p>Grundlagen und Wiedereinsteiger</p>
-            </Deutsch>
-            <br />
-            <p>Price: 15€ / Urban Sport</p>
-            <Deutsch>
-              <p>Preis: 15€ / Urban Sport</p>
-            </Deutsch>
-          </ClassTopic>
-
-          <ClassTopic>
-            <p className={"cancelled"}>- not taking place at the moment -</p>
-            <p>Technique, Improvisation, Practice</p>
-            <Deutsch>
-              <p>Technik, Impro, Übungen</p>
-            </Deutsch>
-            <br />
-            <p>Price: 18€</p>
-            <Deutsch>
-              <p>Preis: 18€</p>
-            </Deutsch>
-          </ClassTopic>
         </Classes>
-       <BookAClassButton href={"mailto:matiaspersonal@gmail.com?subject=Book%20a%20spot%20for%20a%20group%20class"}>
+       <StyledButton href={"mailto:matiaspersonal@gmail.com?subject=Book%20a%20spot%20for%20a%20group%20class"}>
           Save your spot now!
-      </BookAClassButton>
+      </StyledButton>
       <br />
-      <BookAClassButton href={"tel:+491774946117"}>
+      <StyledButton href={"tel:+491774946117"}>
           (or call me)
-        </BookAClassButton>
+        </StyledButton>
       </StyledSection>
   );
 };
 
 export default GroupLessons;
 
-const Deutsch = styled.div`
-  h4,
-  h3 {
-    color: var(--secondary-color) !important;
-  }
-  h4 {
-    font-size: clamp(1.1rem, 2vw, 1.5rem) !important;
-  }
-  p {
-    font-size: clamp(1rem, 1.5vw, 1.5rem) !important;
-    color: var(--secondary-color) !important;
-  }
-`;
-
-const BookAClassButton = styled.a`
-  background-color: var(--main-black-color);
-  color: var(--main-buttonText-color);
+export const StyledButton = styled.a`
+  background-color: var(--black-500);
+  color: var(--white);
   width: 300px;
   border-radius: 10px;
-  border-width: 0px;
-  border-color: var(--main-buttonText-color);
+  border-width: 0;
   padding: 10px 20px;
   font-size: 1.5rem;
   font-weight: bolder;
   align-self: center;
   text-align: center;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px var(--accent-color);
   transition: all 100ms ease-in-out;
   &:hover {
-    border-color: var(--main-buttonText-color);
+    border-color: var(--white);
     color: var(--white);
     transform: translate(-2px, -2px);
   }
@@ -150,14 +79,14 @@ const Dia = styled.div`
     padding-left: 0px;
     padding-top: 10px;
     display: inline-block;
-    color: var(--main-white-color);
+    color: var(--white);
   }
 `;
 
 const Horario = styled.div`
   p {
     font-size: 1.3rem;
-    color: var(--main-lightblue-color);
+    color: var(--gray-600);
   }
 `;
 
@@ -167,21 +96,13 @@ const ClassTopic = styled.div`
     color: darkred !important;
   }
   p {
-    color: var(--main-white-color);
+    color: var(--white);
     line-height: 1.6rem;
     font-size: 1.3rem;
     font-family: sans-serif;
   }
   &:nth-of-type(1) {
     grid-row: 1/2;
-    grid-column: 2 / 3;
-  }
-  &:nth-of-type(2) {
-    grid-row: 2/3;
-    grid-column: 2 / 3;
-  }
-  &:nth-of-type(3) {
-    grid-row: 3/4;
     grid-column: 2 / 3;
   }
   @media (max-width: 800px) {
@@ -206,7 +127,7 @@ const ClassName = styled.div`
   text-align: right;
 
   h4 {
-    color: var(--main-white-color);
+    color: var(--white);
     font-family: "Roboto Medium";
     ${({cancel}) => cancel ? css`text-decoration: line-through`: ''}
   }
@@ -214,27 +135,11 @@ const ClassName = styled.div`
     grid-row: 1/2;
     grid-column: 1 / 2;
   }
-  &:nth-of-type(2) {
-    grid-row: 2/3;
-    grid-column: 1 / 2;
-  }
-  &:nth-of-type(3) {
-    grid-row: 3/4;
-    grid-column: 1 / 2;
-  }
   @media (max-width: 800px) {
     text-align: left;
 
     &:nth-of-type(1) {
       grid-row: 1/2;
-      grid-column: 1 / 1;
-    }
-    &:nth-of-type(2) {
-      grid-row: 3/4;
-      grid-column: 1 / 1;
-    }
-    &:nth-of-type(3) {
-      grid-row: 5/6;
       grid-column: 1 / 1;
     }
   }
@@ -245,8 +150,7 @@ const Classes = styled.div`
   margin: 50px auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  grid-template-areas: "class details" "class details" "class details";
+  grid-template-areas: "class details";
   grid-row-gap: 100px;
   align-items: center;
   @media (max-width: 800px) {
@@ -254,7 +158,7 @@ const Classes = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "class" "details";
-    grid-row-gap: 0px;
+    grid-row-gap: 0;
   }
 `;
 
@@ -265,5 +169,4 @@ const StyledSection = styled.section`
   flex-direction: column;
   gap: 24px;
   padding: 2rem;
-  background-image: url('./assets/wall-4-light.png');
 `;

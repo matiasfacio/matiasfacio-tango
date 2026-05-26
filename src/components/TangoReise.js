@@ -67,13 +67,13 @@ const TangoReiseContent = styled.div`
 `;
 
 const ReiseDatum = styled.div`
-  color: var(--main-white-color);
+  color: var(--white);
   font-size: 1rem;
   font-family: monospace;
 `;
 
 const Destination = styled.div`
-  color: var(--main-white-color);
+  color: var(--white);
   font-size: 1.5rem;
   margin-bottom: 20px;
   display: block;

@@ -43,7 +43,7 @@ const ContactInfo = styled.div`
 const ContactDetailName = styled.div`
   display: inline-block;
   color: transparent;
-  background-color: var(--main-title-footer);
+  background-color: var(--white);
   background-clip: text;
   font-size: 6rem;
   font-family: "Six Caps";
@@ -66,7 +66,7 @@ const ContactDetailPhone = styled.div`
 `;
 
 const StyledSection = styled.div`
-  background-color: var(--main-black-color);
+  background-color: var(--black);
   width: 100vw;
   min-height: 100vh;
   display: flex;
@@ -76,8 +76,7 @@ const StyledSection = styled.div`
   align-items: center;
 
   .socialMediaInfo a {
-    color: var(--secondary-color);
-    color: var(--main-buttonText-color);
+    color: var(--white);
     font-size: 1.5rem;
     margin-left: 10px;
     font-family: sans-serif;
@@ -86,7 +85,7 @@ const StyledSection = styled.div`
   }
 
   .socialMediaInfo a:hover {
-    color: var(--footer-title);
+    color: var(--white);
   }
 
   .socialMediaInfo {
@@ -113,7 +112,7 @@ const StyledSection = styled.div`
   .instagram,
   .youtube,
   .impressumText p {
-    background-color: var(--main-bg-color);
+    background-color: var(--accent-color);
     border-radius: 10px;
     margin-bottom: 20px;
   }
