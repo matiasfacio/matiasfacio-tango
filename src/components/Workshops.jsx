@@ -11,11 +11,11 @@ export const Workshops = () => {
       </Title>
       <StyledWorkshops>
         <Dia>
-          Wednesday 11.06.2024
+          Saturday 12.09.2026
           <Deutsch>
-            <p>Mittwoch</p>
+            <p>Samstag</p>
           </Deutsch>
-          <Horario>20:30 - 22:00 Uhr</Horario>
+          <Horario>16:30 - 18:30 Uhr</Horario>
         </Dia>
 
         <ClassName><h4>Leader's Technique Seminar</h4></ClassName>
@@ -26,7 +26,7 @@ export const Workshops = () => {
           </Deutsch>
         </ClassTopic>
         <ClassTopic>
-          <p>Price: 20€</p>
+          <p>Price: 35€</p>
           <p>Where: Immanuelkirchstrasse 6, 10405 Berlin</p>
         </ClassTopic>
       </StyledWorkshops>
@@ -62,7 +62,7 @@ const ClassName = styled.div`
   padding-right: 30px;
   h4 {
     color: var(--white);
-    font-family: "Roboto Medium";
+    font-family: "Roboto Medium",sans-serif;
   }
 `
 
