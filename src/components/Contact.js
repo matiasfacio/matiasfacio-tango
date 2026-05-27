@@ -15,21 +15,10 @@ export default function Contact() {
           <p>Follow me to check my dance videos and updated news!</p>
         </div>
         <div className="contentSM">
-          <div className="facebook">
-            <a href={"index.html#"}>Facebook</a>
-          </div>
-          <div className="instagram">
-            <a href={"index.html#"}>Instagram</a>
-          </div>
-          <div className="youtube">
-            <a href={"index.html#"}>Youtube</a>
-          </div>
-        </div>
-
-        <div className="impressumText">
-          <p>
-            <a href="impressum.html">Impressum</a>
-          </p>
+            <a href={"index.html#"} className="facebook">Facebook</a>
+            <a href={"index.html#"} className="instagram">Instagram</a>
+            <a href={"index.html#"} className="youtube">Youtube</a>
+            <a href={"impressum.html"} className="impressumText">- Impressum -</a>
         </div>
       </div>
     </StyledSection>
@@ -77,15 +66,23 @@ const StyledSection = styled.div`
 
   .socialMediaInfo a {
     color: var(--white);
+    background-color: var(--accent-color);
     font-size: 1.5rem;
     margin-left: 10px;
     font-family: sans-serif;
     line-height: 3rem;
     font-weight: bolder;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    &.impressumText {
+        margin-top: 40px;
+    }
   }
 
   .socialMediaInfo a:hover {
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--accent-color);
   }
 
   .socialMediaInfo {
@@ -96,24 +93,10 @@ const StyledSection = styled.div`
     line-height: 1.6rem;
   }
 
-  .impressumText p,
-  .followMe p {
-    color: var(--white) !important;
-    font-family: sans-serif;
-    margin-top: 50px;
-    font-size: 1.3rem;
-  }
-
   .contentSM {
     margin-top: 20px;
-  }
-
-  .facebook,
-  .instagram,
-  .youtube,
-  .impressumText p {
-    background-color: var(--accent-color);
-    border-radius: 10px;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 `;
