@@ -48,11 +48,23 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <style>
+      html {
+        --accent-color: #5A7268;
+        --white: #F5F8F7
+      }
       body {
-        background-color: #5A7268;
-        color: white;
+        background-color: var(--accent-color);
+        color: var(--white);
         font-family: "Roboto", sans-serif;
         line-height: 1.6;
+      }
+
+      button#back-button {
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: var(--accent-color);
+        background-color: var(--white);
       }
     </style>
   </head>
