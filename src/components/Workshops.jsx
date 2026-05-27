@@ -28,6 +28,7 @@ export const Workshops = () => {
         <ClassTopic>
           <p>Price: 35€</p>
           <p>Where: Immanuelkirchstrasse 6, 10405 Berlin</p>
+          <p>Registration: matiaspersonal@gmail.com | +49 177 4946117</p>
         </ClassTopic>
       </StyledWorkshops>
     </StyledSection>
@@ -88,7 +89,7 @@ const Dia = styled.div`
     font-family: sans-serif;
     font-weight: bolder;
     font-size: clamp(1.5rem, 1.5vw, 2.5em);
-    padding-left: 0px;
+    padding-left: 0;
     padding-top: 10px;
     color: var(--white);
 `;
